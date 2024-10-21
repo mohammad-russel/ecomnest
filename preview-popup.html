@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Responsive Iframe Example</title>
+    <style>
+        /* Smooth transition for iframe resizing */
+        #content-iframe {
+            transition: 0.8s;
+            /* 0.5 seconds for width only */
+            height: 600px;
+            /* Fixed height */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 flex flex-col items-center justify-center min-h-screen">
+    <header class="bg-white shadow-md w-full">
+        <nav
+            class="flex items-center justify-between px-6 py-4 max-md:flex-wrap max-md:fixed max-md:w-full max-md:bg-white max-md:shadow-md max-md:top-0 z-50">
+            <button
+                class="px-4 py-2 text-sm font-bold text-white bg-red-500 rounded-full max-md:text-xs max-md:px-3 max-md:py-1.5">
+                Cancel
+            </button>
+
+            <div class="hidden max-md:block"></div>
+
+            <div class="flex items-center gap-6 px-5 py-2 bg-white rounded-full shadow-sm max-md:gap-4 max-md:px-3">
+                <i class="fas fa-desktop cursor-pointer text-2xl" data-width="100%" title="Desktop"></i>
+                <i class="fas fa-tablet-alt cursor-pointer text-2xl" data-width="80%" title="Tablet"></i>
+                <i class="fas fa-mobile-alt cursor-pointer text-2xl" data-width="50%" title="Mobile"></i>
+            </div>
+
+            <div class="hidden max-md:flex items-center gap-2">
+                <p class="text-sm text-sky-600">Basic Plan</p>
+                <p class="text-xl font-semibold text-neutral-800">৳ 599 /month</p>
+            </div>
+
+            <button
+                class="px-4 py-2 text-sm font-bold text-white bg-blue-500 rounded-full max-md:text-xs max-md:px-3 max-md:py-1.5">
+                Select Theme
+            </button>
+        </nav>
+
+        <!-- Iframe element -->
+        <div class="flex justify-center mt-6">
+            <iframe src="https://www.odoo.com/" class="rounded-lg shadow-md w-full" id="content-iframe"
+                title="Embedded Content"></iframe>
+        </div>
+    </header>
+
+    <script>
+        $(document).ready(function () {
+            // Change iframe width based on clicked icon with a delay
+            $("i[data-width]").click(function () {
+                var newWidth = $(this).data("width");
+
+                // Update iframe width only
+                $("#content-iframe").css("width", newWidth);
+            });
+        });
+    </script>
+</body>
+
+</html>
