@@ -38,10 +38,11 @@
                 <i class="fas fa-mobile-alt cursor-pointer text-2xl" data-width="50%" title="Mobile"></i>
             </div>
 
-            <div class="hidden max-md:flex items-center gap-2">
+            <!-- Pricing Information moved here -->
+            <!-- <div class="max-md:flex items-center gap-2">
                 <p class="text-sm text-sky-600">Basic Plan</p>
                 <p class="text-xl font-semibold text-neutral-800">৳ 599 /month</p>
-            </div>
+            </div> -->
 
             <button
                 class="px-4 py-2 text-sm font-bold text-white bg-blue-500 rounded-full max-md:text-xs max-md:px-3 max-md:py-1.5">
@@ -64,6 +65,18 @@
 
                 // Update iframe width only
                 $("#content-iframe").css("width", newWidth);
+            });
+
+            // Cancel button action
+            $(".bg-red-500").click(function () {
+                alert("Cancelled!");
+                // Additional logic can be added here
+            });
+
+            // Select Theme button action
+            $(".bg-blue-500").click(function () {
+                alert("Theme selected!");
+                // Additional logic can be added here
             });
         });
     </script>

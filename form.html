@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section class="flex flex-col max-w-[582px] mx-auto">
+        <header class="flex flex-col items-center justify-center p-0 gap-3 max-w-full w-[472px] h-[69px] mx-auto">
+            <h1 class="text-3xl font-semibold leading-tight text-black">ফর্ম পূরণ করুন</h1>
+            <p class="mt-3.5 text-sm leading-loose text-gray-800 opacity-80">তথ্য দিন এবং অর্ডার প্লেস করুন</p>
+        </header>
+
+        <div class="flex relative gap-4 px-4 py-3.5 mt-6 bg-white rounded-[20px] min-h-[49px] shadow-[5px_5px_10px_rgba(201,217,232,0.6)] w-full max-w-[466px] items-center mx-auto"
+            role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+            <div
+                class="flex flex-1 gap-2 py-3.5 bg-white rounded-[12px] min-w-[240px] w-[381px] h-[23px] shadow-[inset_4px_3px_10px_rgba(225,232,240,0.7)]">
+            </div>
+            <span class="z-0 w-[38px] text-[20px] font-semibold leading-[22px] text-emerald-500">20%</span>
+            <div
+                class="flex absolute bottom-3.5 left-4 z-0 items-center bg-emerald-500 rounded-[12px] h-[21px] w-[94px]">
+            </div>
+        </div>
+
+
+        <form
+            class="flex flex-col px-5 py-10 mt-6 w-full text-base font-medium leading-none bg-white rounded-3xl shadow-[5px_5px_10px_rgba(201,217,232,0.6)] text-slate-600">
+            <h2 class="text-xl font-semibold text-[#36597D]">আপনার তথ্য দিন</h2>
+
+            <div class="mt-5">
+                <label for="fullName" class="sr-only">সম্পূর্ণ নাম</label>
+                <input type="text" id="fullName"
+                    class="w-full px-6 py-6 text-left bg-white rounded-xl shadow-[inset_4px_3px_10px_rgba(225,232,240,0.7)] min-h-[59px]"
+                    placeholder="সম্পূর্ণ নাম" required />
+            </div>
+
+            <div class="mt-5">
+                <label for="phone" class="sr-only">আপনার ফোন নম্বর</label>
+                <input type="tel" id="phone"
+                    class="w-full px-6 py-6 text-left bg-white rounded-xl shadow-[inset_4px_3px_10px_rgba(225,232,240,0.7)] min-h-[59px]"
+                    placeholder="আপনার ফোন নম্বর" required />
+            </div>
+
+            <div class="mt-5">
+                <label for="company" class="sr-only">কোম্পানির নাম</label>
+                <input type="text" id="company"
+                    class="w-full px-6 py-6 text-left bg-white rounded-xl shadow-[inset_4px_3px_10px_rgba(225,232,240,0.7)] min-h-[59px]"
+                    placeholder="কোম্পানির নাম" required />
+            </div>
+
+            <div class="mt-5">
+                <select id="physicalProduct"
+                    class="w-full px-6 py-6 text-left bg-white rounded-xl shadow-[inset_4px_3px_10px_rgba(225,232,240,0.7)] min-h-[59px]">
+                    <option value="" disabled selected>নির্বাচন করুন</option>
+                    <option value="option1">অপশন ১</option>
+                    <option value="option2">অপশন ২</option>
+                    <option value="option3">অপশন ৩</option>
+                </select>
+            </div>
+
+            <div class="mt-5">
+                <select id="businessExperience"
+                    class="w-full px-6 py-6 text-left bg-white rounded-xl shadow-[inset_4px_3px_10px_rgba(225,232,240,0.7)] min-h-[59px]">
+                    <option value="" disabled selected>নির্বাচন করুন</option>
+                    <option value="experience1">অভিজ্ঞতা ১</option>
+                    <option value="experience2">অভিজ্ঞতা ২</option>
+                    <option value="experience3">অভিজ্ঞতা ৩</option>
+                </select>
+            </div>
+        </form>
+
+        <div class="flex flex-col items-start mt-6 w-full">
+            <button type="submit"
+                class="flex gap-3 justify-center items-center px-10 py-6 bg-white rounded-3xl min-h-[60px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] w-[163px] text-lg font-medium text-slate-600">
+                <span>পরবর্তী</span>
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/973f8e1635c87a6d7bfb066567a2b27ee87b676a75427825db300fb0bc6e39ef?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                    alt="" class="object-contain w-3.5" />
+            </button>
+        </div>
+
+    </section>
+
+    <section class="flex flex-col max-w-[582px]">
+        <header class="flex flex-col self-center max-w-full text-center w-[472px]">
+            <h1 class="text-3xl font-semibold leading-none text-black max-md:max-w-full">
+                ফর্ম পূরণ করুন
+            </h1>
+            <p class="mt-3.5 text-sm leading-loose text-gray-800 max-md:max-w-full">
+                তথ্য দিন এবং অর্ডার প্লেস করুন
+            </p>
+        </header>
+
+        <div
+            class="flex relative gap-4 self-center px-4 py-3.5 mt-6 max-w-full text-xl font-semibold leading-none text-emerald-500 whitespace-nowrap bg-white rounded-3xl min-h-[49px] shadow-[5px_5px_10px_rgba(201,217,232,0.6)] w-[466px]">
+            <div class="flex z-0 flex-1 shrink gap-2 py-3.5 bg-white rounded-xl basis-0 h-[23px] min-w-[240px] w-[379px]"
+                role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+            <span class="z-0 my-auto" aria-hidden="true">40%</span>
+            <div
+                class="flex absolute bottom-3.5 left-4 z-0 shrink-0 gap-2 items-center self-start bg-emerald-500 rounded-xl h-[21px] w-[157px]">
+            </div>
+        </div>
+
+        <form
+            class="flex relative flex-col items-start px-9 py-10 mt-6 w-full bg-white rounded-3xl shadow-[5px_5px_10px_rgba(201,217,232,0.6)] max-md:px-5 max-md:max-w-full">
+            <h2 class="z-0 self-stretch text-xl font-semibold leading-none text-slate-600 max-md:max-w-full">
+                ডোমেইন যাচাই
+            </h2>
+            <p class="z-0 mt-5 text-base font-medium leading-none text-center text-slate-600">
+                আপনার কি ডোমেইন আছে?
+            </p>
+            <div
+                class="flex z-0 gap-5 items-start py-3 mt-5 text-sm font-medium leading-none text-center whitespace-nowrap">
+                <button type="button"
+                    class="gap-2 self-stretch px-6 py-5 text-white bg-sky-600 rounded-xl min-h-[47px] max-md:px-5">
+                    হ্যাঁ
+                </button>
+                <button type="button"
+                    class="gap-2 self-stretch px-6 py-5 rounded-xl bg-slate-100 min-h-[47px] text-slate-600 max-md:px-5">
+                    না
+                </button>
+            </div>
+            <label for="domainName" class="sr-only">আপনার ডোমেইন নাম</label>
+            <input type="text" id="domainName"
+                class="gap-2 self-stretch px-6 py-6 mt-5 w-full text-base font-medium leading-none text-center bg-white rounded-xl min-h-[59px] text-slate-600 max-md:px-5 max-md:max-w-full"
+                placeholder="আপনার ডোমেইন নাম" />
+            <aside
+                class="flex absolute top-6 right-7 z-0 gap-2 justify-center items-center px-3.5 py-4 h-[47px] min-h-[47px] rounded-[50px]">
+                <p class="self-stretch my-auto text-base font-medium leading-none text-center text-slate-600">
+                    প্যাকেজ মূল্য
+                </p>
+                <p class="self-stretch my-auto text-2xl font-semibold leading-none text-sky-600">
+                    ৳ 599
+                </p>
+            </aside>
+        </form>
+
+        <nav
+            class="flex flex-wrap gap-10 justify-between items-center mt-6 w-full text-lg font-medium leading-none text-center whitespace-nowrap text-slate-600 max-md:max-w-full">
+            <button type="button"
+                class="flex gap-3 justify-center items-center self-stretch px-10 py-6 my-auto bg-white rounded-3xl min-h-[60px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] w-[163px] max-md:px-5">
+                <img loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/bcdc9ef79e8eea507a7a753668dfa3174d2c16aa1fbffaf362f64be0e57ce4fe?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                    alt="" class="object-contain shrink-0 self-stretch my-auto aspect-[1.07] w-[15px]" />
+                <span class="self-stretch my-auto">পূর্ববর্তী</span>
+            </button>
+            <button type="button"
+                class="flex gap-3 justify-center items-center self-stretch px-10 py-6 my-auto bg-white rounded-3xl min-h-[60px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] w-[163px] max-md:px-5">
+                <span class="self-stretch my-auto">পরবর্তী</span>
+                <img loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/973f8e1635c87a6d7bfb066567a2b27ee87b676a75427825db300fb0bc6e39ef?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                    alt="" class="object-contain shrink-0 self-stretch my-auto w-3.5 aspect-square" />
+            </button>
+        </nav>
+    </section>
+
+</body>
+
+</html>

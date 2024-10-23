@@ -32,35 +32,52 @@
         .brand-sec {
             background: #f8f8f8;
         }
+
+        .silder-container {
+            overflow: auto;
+        }
+
+        .brand-slider {
+            overflow: auto;
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
-    <header class="flex overflow-hidden flex-col items-center px-20 pt-1 pb-6 bg-slate-100 max-md:px-5 max-md:pt-24">
+    <header class="flex overflow-hidden flex-col items-center px-20 pt-1 pb-6 bg-slate-100 max-md:px-5 max-md:pt-4">
         <div class="main-container flex flex-col p-1 items-center m-a w-full max-w-[1440px] max-md:max-w-full">
 
             <nav data-aos="fade-down" data-aos-delay="200"
-                class="navbar flex gap-5 justify-between items-center px-7 py-4 w-full bg-white max-w-[1200px] rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] max-md:px-5 max-md:max-w-full max-sm:flex-col max-sm:gap-3">
+                class="navbar flex gap-5 justify-between items-center px-7 py-4 w-full bg-white max-w-[1200px] h-[80px] left-[calc(50%-600px)] top-[179px] rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2),_-4px_-4px_10px_rgba(255,255,255,0.2),_inset_-5px_-5px_10px_rgba(136,150,163,0.25)] max-lg:left-0 max-md:px-5 max-md:max-w-full max-md:rounded-[50px] max-md:h-[70px] max-sm:gap-3 max-sm:h-auto">
+
+                <!-- Logo -->
                 <img loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/e74d0d3fa353d66c694249f1b8de4365fb9c2cdc48495d426cc931359e4aa6f9?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                     alt="Ecom Nest Logo" class="object-contain shrink-0 my-auto w-28 max-w-full max-sm:w-20" />
+
+                <!-- Navigation Links -->
                 <ul
-                    class="flex gap-8 items-center text-base font-medium text-slate-950 max-md:max-w-full max-sm:flex-col max-sm:gap-3">
+                    class="flex gap-8 items-center text-base font-medium text-slate-950 max-md:gap-5 max-md:text-sm max-md:max-w-full max-sm:flex-col max-sm:gap-3 max-sm:items-start max-sm:hidden">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About us</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="flex gap-2 items-center text-sm font-bold max-sm:flex-col max-sm:gap-3">
-                    <a href="#login" class="px-6 py-3.5 bg-slate-100 rounded-[50px] text-neutral-800 max-sm:px-4">Log
+
+                <!-- Buttons -->
+                <div class="flex gap-2 items-center text-sm font-bold max-md:text-xs max-sm:gap-3">
+                    <a href="#login"
+                        class="flex items-center justify-center px-6 py-3 gap-2 w-[90px] h-[47px] bg-[#ECF1F7] shadow-inner rounded-full max-sm:w-full max-sm:text-center">Log
                         in</a>
-                    <a href="#get-started" class="px-6 py-3.5 text-white bg-red-400 rounded-[50px] max-sm:px-4">Get
+                    <a href="#get-started"
+                        class="flex items-center justify-center px-6 py-3 gap-2 w-[128px] h-[47px] bg-[#FB6377] shadow-inner rounded-full text-white max-sm:w-full max-sm:text-center">Get
                         Started</a>
                 </div>
             </nav>
+
 
             <section class="overflow-auto self-stretch px-6 py-1.5 mx-auto w-full max-w-[400px]">
                 <h2 class="text-sm font-semibold leading-loose text-center text-white bg-blue-500 rounded-[50px]">
@@ -79,7 +96,7 @@
             </p>
 
             <div data-aos="fade-left" data-aos-delay="600"
-                class="flex gap-3.5 items-center mt-12 text-sm font-bold max-md:mt-10 max-sm:flex-col max-sm:gap-3">
+                class="flex gap-3.5 items-center mt-12 text-sm font-bold max-md:mt-10 max-sm:gap-3">
                 <a href="#demo"
                     class="px-10 py-3.5 text-white bg-red-400 rounded-[9999px] shadow-[8px_8px_16px_rgba(201,217,232,1)] max-sm:px-5">
                     ডেমো দেখুন
@@ -91,7 +108,7 @@
             </div>
 
             <div
-                class="flex flex-wrap gap-9 items-center mt-20 text-sm font-bold text-neutral-800 max-md:mt-10 max-md:max-w-full">
+                class="flex silder-container gap-9 items-center mt-20 text-sm font-bold text-neutral-800 max-md:mt-10 max-md:max-w-full">
                 <img loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/85abbd80b8cd308f5b4b7ec1081c8ee6fa4530eca5c89dbb4352fd79b137aff1?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                     alt="Ecom Nest Platform Preview"
@@ -119,7 +136,7 @@
             <section class=" brand-sec flex flex-col mt-16 max-w-full w-[1122px] max-md:mt-10">
                 <h2 class="text-sm font-semibold leading-loose text-center text-gray-800 max-md:max-w-full">আমরা
                     যাদের সুন্দর ওয়েবসাইট তৈরি করতে সাহায্য করেছি</h2>
-                <div class="flex flex-wrap gap-10 items-center mt-10 w-full max-md:max-w-full brands">
+                <div class="flex brand-slider gap-10 items-center mt-10 w-full max-md:max-w-full brands">
                     <img loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/208b58197c5ee9c682fb1dde6c58c3b3ccd5e0b3098473ee8909aad449f5df3c?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                         alt="Client Logo 1"
@@ -170,7 +187,7 @@
                     </header>
                     <div class="flex flex-wrap gap-5 mt-16 min-h-[214px] max-md:mt-10">
                         <article
-                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5)] w-[179px]">
+                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
                                 class="flex gap-2 justify-center items-center self-center px-5 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
@@ -178,16 +195,14 @@
                                     class="object-contain self-stretch my-auto w-6 aspect-square" alt="" />
                             </div>
                             <div class="flex flex-col justify-center mt-4 w-full text-center">
-                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">
-                                    No upfront investment
-                                </h3>
-                                <p class="mt-1.5 text-sm leading-none text-gray-800">
-                                    এককালীন কোনো ইনভেস্টমেন্ট নেই
-                                </p>
+                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">No upfront
+                                    investment</h3>
+                                <p class="mt-1.5 text-sm leading-none text-gray-800">এককালীন কোনো ইনভেস্টমেন্ট নেই</p>
                             </div>
                         </article>
+
                         <article
-                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5)] w-[179px]">
+                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
                                 class="flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
@@ -195,16 +210,15 @@
                                     class="object-contain self-stretch my-auto aspect-[1.15] w-[30px]" alt="" />
                             </div>
                             <div class="flex flex-col justify-center mt-4 w-full text-center">
-                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">
-                                    Free domain & hosting
-                                </h3>
-                                <p class="mt-1.5 text-sm leading-5 text-gray-800">
-                                    সম্পূর্ণ ফ্রি ডোমেইন ও <br /> হোস্টিং পাবেন
-                                </p>
+                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">Free domain
+                                    & hosting</h3>
+                                <p class="mt-1.5 text-sm leading-5 text-gray-800">সম্পূর্ণ ফ্রি ডোমেইন ও <br /> হোস্টিং
+                                    পাবেন</p>
                             </div>
                         </article>
+
                         <article
-                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5)] w-[179px]">
+                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
                                 class="flex gap-2 justify-center items-center self-center px-3.5 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
@@ -212,16 +226,15 @@
                                     class="object-contain self-stretch my-auto aspect-[1.31] w-[34px]" alt="" />
                             </div>
                             <div class="flex flex-col justify-center mt-4 w-full text-center">
-                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">
-                                    Super fast performance
-                                </h3>
-                                <p class="mt-1.5 text-sm leading-5 text-gray-800">
-                                    অত্যন্ত দ্রুতগতি ও <br /> নিরাপত্তা
+                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">Super fast
+                                    performance</h3>
+                                <p class="mt-1.5 text-sm leading-5 text-gray-800">অত্যন্ত দ্রুতগতি ও <br /> নিরাপত্তা
                                 </p>
                             </div>
                         </article>
+
                         <article
-                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5)] w-[179px]">
+                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
                                 class="flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
@@ -229,16 +242,15 @@
                                     class="object-contain self-stretch my-auto aspect-square w-[26px]" alt="" />
                             </div>
                             <div class="flex flex-col justify-center mt-4 w-full text-center">
-                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">
-                                    Easy-to-use platform
-                                </h3>
-                                <p class="mt-1.5 text-sm leading-5 text-gray-800">
-                                    সহজেই ব্যবহারযোগ্য <br /> প্ল্যাটফর্ম
+                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">Easy-to-use
+                                    platform</h3>
+                                <p class="mt-1.5 text-sm leading-5 text-gray-800">সহজেই ব্যবহারযোগ্য <br /> প্ল্যাটফর্ম
                                 </p>
                             </div>
                         </article>
+
                         <article
-                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5)] w-[179px]">
+                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
                                 class="flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
@@ -246,46 +258,46 @@
                                     class="object-contain self-stretch my-auto aspect-square w-[26px]" alt="" />
                             </div>
                             <div class="flex flex-col justify-center mt-4 w-full text-center">
-                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">
-                                    Easy-to-use platform
-                                </h3>
-                                <p class="mt-1.5 text-sm leading-5 text-gray-800">
-                                    সহজেই ব্যবহারযোগ্য <br /> প্ল্যাটফর্ম
+                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">Easy-to-use
+                                    platform</h3>
+                                <p class="mt-1.5 text-sm leading-5 text-gray-800">সহজেই ব্যবহারযোগ্য <br /> প্ল্যাটফর্ম
                                 </p>
                             </div>
                         </article>
+
                     </div>
                 </div>
             </section>
 
             <div
-                class="z-10 px-7 py-6 -mt-12 max-w-full bg-white rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] w-[518px] max-md:px-5">
-                <div class="flex gap-5 max-md:flex-col">
-                    <div class="flex flex-col w-[15%] max-md:ml-0 max-md:w-full">
+                class="z-10 px-5 py-4 -mt-12 max-w-full bg-white rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] w-[400px] max-md:w-[400px]">
+                <div class="flex gap-4 max-md:flex-col max-md:align-center">
+                    <div class="flex flex-col w-[15%] max-md:w-full">
                         <div
-                            class="flex gap-2 justify-center items-center px-1 mx-auto bg-slate-100 h-[50px] min-h-[50px] rounded-[50px] w-[50px] max-md:mt-10">
+                            class="flex gap-2 justify-center items-center px-1 mx-auto bg-slate-100 h-[40px] min-h-[40px] rounded-[50px] w-[40px] max-md:mt-5">
                             <img loading="lazy"
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/76247ec60ed86c9d774470fbac4c008b4cb6a1b6c28bedda3d213aaaed21b888?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                alt="Support icon" class="object-contain self-stretch my-auto aspect-square w-[30px]" />
+                                alt="Support icon" class="object-contain self-stretch my-auto aspect-square w-[25px]" />
                         </div>
                     </div>
-                    <div class="flex flex-col ml-5 w-[70%] max-md:ml-0 max-md:w-full">
-                        <div class="flex flex-col justify-center self-stretch my-auto max-md:mt-10">
-                            <h3 class="text-base font-semibold leading-loose text-slate-950">সম্পূর্ণ কাস্টমাইজযোগ্য
+                    <div class="flex flex-col w-[70%] max-md:w-full text-center	">
+                        <div class="flex flex-col justify-center self-stretch my-auto max-md:mt-5">
+                            <h3 class="text-sm font-semibold leading-loose text-slate-950">সম্পূর্ণ কাস্টমাইজযোগ্য
                                 ডিজাইন</h3>
-                            <p class="mt-1 text-sm text-gray-800">24/7 personal support via WhatsApp</p>
+                            <p class="mt-1 text-xs text-gray-800">24/7 personal support via WhatsApp</p>
                         </div>
                     </div>
-                    <div class="flex flex-col ml-5 w-[15%] max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col w-[15%] max-md:w-full max-sm:hidden">
                         <div
-                            class="flex gap-2 justify-center items-center px-1 mx-auto bg-red-400 h-[50px] min-h-[50px] rounded-[50px] w-[50px] max-md:mt-10">
+                            class="flex gap-2 justify-center items-center px-1 mx-auto bg-red-400 h-[40px] min-h-[40px] rounded-[50px] w-[40px] max-md:mt-5">
                             <img loading="lazy"
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/f59351d5974725bd8543c07c8e1729a08ce6b448b22539e52d35e82d11e0433c?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                alt="WhatsApp icon" class="object-contain self-stretch my-auto w-5 aspect-square" />
+                                alt="WhatsApp icon" class="object-contain self-stretch my-auto w-4 aspect-square" />
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <section class="flex  gap-5 justify-between mt-32 w-full max-w-[1200px] max-md:mt-10 max-md:max-w-full">
                 <div class="flex flex-col">
