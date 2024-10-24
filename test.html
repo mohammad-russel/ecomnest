@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom transition styles */
+        .slider-item {
+            transition: all 0.3s ease;
+        }
+
+        .small {
+            width: 240px;
+        }
+
+        .big {
+            width: 500px;
+        }
+
+        /* Custom positions */
+        .left {
+            transform: translateX(-150%);
+        }
+
+        .center {
+            transform: translateX(0);
+        }
+
+        .right {
+            transform: translateX(150%);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200">
+    <div
+        class="flex slider-container gap-9 items-center mt-20 text-sm font-bold text-neutral-800 max-md:mt-10 max-md:max-w-full relative">
+        <!-- Left Image -->
+        <img loading="lazy" id="img1"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/85abbd80b8cd308f5b4b7ec1081c8ee6fa4530eca5c89dbb4352fd79b137aff1?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+            alt="Ecom Nest Platform Preview"
+            class="object-contain self-stretch my-auto rounded-none aspect-[1.44] slider-item small left" />
+
+        <!-- Middle Content -->
+        <div id="middle-content"
+            class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-[423px] max-md:max-w-full slider-item big center">
+            <div
+                class="flex flex-col justify-center px-4 py-5 rounded-2xl bg-slate-100 shadow-[-1px_-1px_0px_rgba(255,255,255,1)] max-md:max-w-full">
+                <div
+                    class="flex relative flex-col items-center px-11 pt-48 pb-5 w-full rounded-xl aspect-[1.5] shadow-[-8px_-8px_16px_rgba(255,255,255,1)] max-md:px-5 max-md:pt-24">
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/f66425c3604b1eba5cad9e6b408fc56ebc78110ecbb8dc4374b03395aae0ebb1?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                        alt="Ecom Nest Platform Demo" class="object-cover absolute inset-0 size-full" />
+                    <a href="#view-demo"
+                        class="relative gap-2 self-stretch px-10 py-3.5 bg-white min-h-[47px] rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] max-md:px-5 text-center">View
+                        demo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Image -->
+        <img loading="lazy" id="img2"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/198d0b806397004927bd4ab6892c5db6df287a847ae465fc319f7f61ce3391d5?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+            alt="Ecom Nest Platform Features"
+            class="object-contain self-stretch my-auto rounded-none aspect-[1.44] slider-item small right" />
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".slider-item").on("click", function () {
+                // Reset all boxes to small size and initial left or right positions
+                $(".slider-item").removeClass("big center left right").addClass("small");
+
+                // Based on the clicked element, adjust positioning and size
+                if ($(this).attr("id") === "img1") {
+                    $("#img1").removeClass("small left").addClass("big center");
+                    $("#middle-content").removeClass("big center").addClass("small right");
+                    $("#img2").removeClass("small right").addClass("small left");
+                } else if ($(this).attr("id") === "img2") {
+                    $("#img2").removeClass("small right").addClass("big center");
+                    $("#middle-content").removeClass("big center").addClass("small left");
+                    $("#img1").removeClass("small left").addClass("small right");
+                } else if ($(this).attr("id") === "middle-content") {
+                    $("#middle-content").removeClass("small").addClass("big center");
+                    $("#img1").removeClass("big center").addClass("small left");
+                    $("#img2").removeClass("big center").addClass("small right");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

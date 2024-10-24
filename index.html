@@ -20,7 +20,8 @@
             margin-bottom: 45px;
         }
 
-        .main-container {
+
+        .for-bg {
             margin: auto;
             background: url('background.svg');
         }
@@ -40,8 +41,19 @@
         .brand-slider {
             overflow: auto;
         }
+
+        .price-card {
+            border: 1px solid rgb(224, 224, 224);
+        }
+
+        .get-start {
+            box-shadow: inset 0px 4px 4px #DCE4EE;
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -49,62 +61,67 @@
     <header class="flex overflow-hidden flex-col items-center px-20 pt-1 pb-6 bg-slate-100 max-md:px-5 max-md:pt-4">
         <div class="main-container flex flex-col p-1 items-center m-a w-full max-w-[1440px] max-md:max-w-full">
 
-            <nav data-aos="fade-down" data-aos-delay="200"
-                class="navbar flex gap-5 justify-between items-center px-7 py-4 w-full bg-white max-w-[1200px] h-[80px] left-[calc(50%-600px)] top-[179px] rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2),_-4px_-4px_10px_rgba(255,255,255,0.2),_inset_-5px_-5px_10px_rgba(136,150,163,0.25)] max-lg:left-0 max-md:px-5 max-md:max-w-full max-md:rounded-[50px] max-md:h-[70px] max-sm:gap-3 max-sm:h-auto">
+            <div
+                class="for-bg main-container flex flex-col p-1 items-center m-a w-full max-w-[1440px] max-md:max-w-full">
 
-                <!-- Logo -->
-                <img loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/e74d0d3fa353d66c694249f1b8de4365fb9c2cdc48495d426cc931359e4aa6f9?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                    alt="Ecom Nest Logo" class="object-contain shrink-0 my-auto w-28 max-w-full max-sm:w-20" />
 
-                <!-- Navigation Links -->
-                <ul
-                    class="flex gap-8 items-center text-base font-medium text-slate-950 max-md:gap-5 max-md:text-sm max-md:max-w-full max-sm:flex-col max-sm:gap-3 max-sm:items-start max-sm:hidden">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <nav data-aos="fade-down" data-aos-delay="200"
+                    class="navbar flex gap-5 justify-between items-center px-7 py-4 w-full bg-white max-w-[1200px] h-[80px] left-[calc(50%-600px)] top-[179px] rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2),_-4px_-4px_10px_rgba(255,255,255,0.2),_inset_-5px_-5px_10px_rgba(136,150,163,0.25)] max-lg:left-0 max-md:px-5 max-md:max-w-full max-md:rounded-[50px] max-md:h-[70px] max-sm:gap-3 max-sm:h-auto">
 
-                <!-- Buttons -->
-                <div class="flex gap-2 items-center text-sm font-bold max-md:text-xs max-sm:gap-3">
-                    <a href="#login"
-                        class="flex items-center justify-center px-6 py-3 gap-2 w-[90px] h-[47px] bg-[#ECF1F7] shadow-inner rounded-full max-sm:w-full max-sm:text-center">Log
-                        in</a>
-                    <a href="#get-started"
-                        class="flex items-center justify-center px-6 py-3 gap-2 w-[128px] h-[47px] bg-[#FB6377] shadow-inner rounded-full text-white max-sm:w-full max-sm:text-center">Get
-                        Started</a>
+                    <!-- Logo -->
+                    <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/e74d0d3fa353d66c694249f1b8de4365fb9c2cdc48495d426cc931359e4aa6f9?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                        alt="Ecom Nest Logo" class="object-contain shrink-0 my-auto w-28 max-w-full max-sm:w-20" />
+
+                    <!-- Navigation Links -->
+                    <ul
+                        class="flex gap-8 items-center text-base font-medium text-slate-950 max-md:gap-5 max-md:text-sm max-md:max-w-full max-sm:flex-col max-sm:gap-3 max-sm:items-start max-md:hidden">
+                        <li><a href="#home">Home</a></li>md
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                    <!-- Buttons -->
+                    <div class="flex gap-2 items-center text-sm font-bold max-md:text-xs max-sm:gap-3">
+                        <a href="#login"
+                            class="flex items-center justify-center px-6 py-3 gap-2 w-[90px] h-[47px] bg-[#ECF1F7] shadow-inner rounded-full max-sm:w-full max-sm:text-center">Log
+                            in</a>
+                        <a href="#get-started"
+                            class="flex items-center justify-center px-6 py-3 gap-2 w-[128px] h-[47px] bg-[#FB6377] shadow-inner rounded-full text-white max-sm:w-full max-sm:text-center">Get
+                            Started</a>
+                    </div>
+                </nav>
+
+                <section class="overflow-auto self-stretch px-6 py-1.5 mx-auto w-full max-w-[400px]">
+                    <h2 class="text-sm font-semibold leading-loose text-center text-white bg-blue-500 rounded-[50px]">
+                        Welcome to Ecom nest</h2>
+                </section>
+
+                <h1 data-aos="zoom-in" data-aos-delay="400"
+                    class="mt-10 text-4xl font-bold text-center text-slate-950 w-[710px] max-md:max-w-full max-sm:text-2xl">
+                    <span class="font-semibold">আমাদের প্ল্যাটফর্ম আপনাকে অল্প টাকায়</span>
+                    <span class="font-semibold text-blue-500">ব্যবসা করতে সাহায্য করে</span>
+                </h1>
+
+                <p data-aos="fade-right" data-aos-delay="500"
+                    class="mt-4 w-96 text-sm text-center text-gray-800 max-sm:w-full">
+                    Start and grow your business with minimal investment using our user-friendly platform.
+                </p>
+
+                <div data-aos="fade-left" data-aos-delay="600"
+                    class="flex gap-3.5 items-center mt-12 text-sm font-bold max-md:mt-10 max-sm:gap-3">
+                    <a href="#demo"
+                        class="px-10 py-3.5 text-white bg-red-400 rounded-[9999px] shadow-[8px_8px_16px_rgba(201,217,232,1)] max-sm:px-5">
+                        ডেমো দেখুন
+                    </a>
+                    <a href="#start-now"
+                        class="px-10 py-3.5 bg-slate-50 rounded-[50px] shadow-[8px_8px_16px_rgba(201,217,232,1)] text-neutral-800 max-sm:px-5">
+                        এখন শুরু করুন
+                    </a>
                 </div>
-            </nav>
 
-
-            <section class="overflow-auto self-stretch px-6 py-1.5 mx-auto w-full max-w-[400px]">
-                <h2 class="text-sm font-semibold leading-loose text-center text-white bg-blue-500 rounded-[50px]">
-                    Welcome to Ecom nest</h2>
-            </section>
-
-            <h1 data-aos="zoom-in" data-aos-delay="400"
-                class="mt-10 text-4xl font-bold text-center text-slate-950 w-[710px] max-md:max-w-full max-sm:text-2xl">
-                <span class="font-semibold">আমাদের প্ল্যাটফর্ম আপনাকে অল্প টাকায়</span>
-                <span class="font-semibold text-blue-500">ব্যবসা করতে সাহায্য করে</span>
-            </h1>
-
-            <p data-aos="fade-right" data-aos-delay="500"
-                class="mt-4 w-96 text-sm text-center text-gray-800 max-sm:w-full">
-                Start and grow your business with minimal investment using our user-friendly platform.
-            </p>
-
-            <div data-aos="fade-left" data-aos-delay="600"
-                class="flex gap-3.5 items-center mt-12 text-sm font-bold max-md:mt-10 max-sm:gap-3">
-                <a href="#demo"
-                    class="px-10 py-3.5 text-white bg-red-400 rounded-[9999px] shadow-[8px_8px_16px_rgba(201,217,232,1)] max-sm:px-5">
-                    ডেমো দেখুন
-                </a>
-                <a href="#start-now"
-                    class="px-10 py-3.5 bg-slate-50 rounded-[50px] shadow-[8px_8px_16px_rgba(201,217,232,1)] text-neutral-800 max-sm:px-5">
-                    এখন শুরু করুন
-                </a>
             </div>
 
             <div
@@ -189,7 +206,7 @@
                         <article
                             class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
-                                class="flex gap-2 justify-center items-center self-center px-5 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
+                                class="flex gap-2 justify-center items-center self-center px-5 bg-slate-100 h-[60px] min-h-[60px]  rounded-[50px] w-[60px]box-border flex flex-row justify-center items-center p-[13px_24px] gap-2 w-15 h-15 bg-[#ECF1F7] shadow-inner shadow-[#DCE4EE] rounded-full flex-none order-none grow-0">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccd96f449eff78b0d44ca40ce66dd8076c2204e0015d355e14bb65340afccfd9?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     class="object-contain self-stretch my-auto w-6 aspect-square" alt="" />
@@ -204,7 +221,7 @@
                         <article
                             class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
-                                class="flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
+                                class="box-border flex flex-row justify-center items-center p-[13px_24px] gap-2 w-15 h-15 bg-[#ECF1F7] shadow-inner shadow-[#DCE4EE] rounded-full flex-none order-none grow-0 flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/65eb618707d73d6b41366b1702b4e33923bed588318964246f58be02c165e56b?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     class="object-contain self-stretch my-auto aspect-[1.15] w-[30px]" alt="" />
@@ -220,7 +237,7 @@
                         <article
                             class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
-                                class="flex gap-2 justify-center items-center self-center px-3.5 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
+                                class="box-border flex flex-row justify-center items-center p-[13px_24px] gap-2 w-15 h-15 bg-[#ECF1F7] shadow-inner shadow-[#DCE4EE] rounded-full flex-none order-none grow-0 flex gap-2 justify-center items-center self-center px-3.5 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/d589aafdfa3d2dd6fbc6a38718c640067785d26c6a140c59d9f139ded398a082?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     class="object-contain self-stretch my-auto aspect-[1.31] w-[34px]" alt="" />
@@ -236,7 +253,7 @@
                         <article
                             class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
-                                class="flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
+                                class="box-border flex flex-row justify-center items-center p-[13px_24px] gap-2 w-15 h-15 bg-[#ECF1F7] shadow-inner shadow-[#DCE4EE] rounded-full flex-none order-none grow-0 flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/dbe6d14d627c529af34cc087f37009be9cdbc62f9233c22deb067bcb29b7b45e?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     class="object-contain self-stretch my-auto aspect-square w-[26px]" alt="" />
@@ -252,7 +269,7 @@
                         <article
                             class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
-                                class="flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
+                                class="box-border flex flex-row justify-center items-center p-[13px_24px] gap-2 w-15 h-15 bg-[#ECF1F7] shadow-inner shadow-[#DCE4EE] rounded-full flex-none order-none grow-0 flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/dbe6d14d627c529af34cc087f37009be9cdbc62f9233c22deb067bcb29b7b45e?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     class="object-contain self-stretch my-auto aspect-square w-[26px]" alt="" />
@@ -270,8 +287,8 @@
             </section>
 
             <div
-                class="z-10 px-5 py-4 -mt-12 max-w-full bg-white rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] w-[400px] max-md:w-[400px]">
-                <div class="flex gap-4 max-md:flex-col max-md:align-center">
+                class="z-10 px-5 py-4 -mt-12 w-full bg-white rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] w-[100%] max-w-[400px] max-md:min-w-[600px] max-md:scale-[0.8] ">
+                <div class="flex max-md:align-center justify-between">
                     <div class="flex flex-col w-[15%] max-md:w-full">
                         <div
                             class="flex gap-2 justify-center items-center px-1 mx-auto bg-slate-100 h-[40px] min-h-[40px] rounded-[50px] w-[40px] max-md:mt-5">
@@ -280,14 +297,14 @@
                                 alt="Support icon" class="object-contain self-stretch my-auto aspect-square w-[25px]" />
                         </div>
                     </div>
-                    <div class="flex flex-col w-[70%] max-md:w-full text-center	">
+                    <div class="flex flex-col w-[100%%] max-md:w-full text-center	">
                         <div class="flex flex-col justify-center self-stretch my-auto max-md:mt-5">
                             <h3 class="text-sm font-semibold leading-loose text-slate-950">সম্পূর্ণ কাস্টমাইজযোগ্য
                                 ডিজাইন</h3>
                             <p class="mt-1 text-xs text-gray-800">24/7 personal support via WhatsApp</p>
                         </div>
                     </div>
-                    <div class="flex flex-col w-[15%] max-md:w-full max-sm:hidden">
+                    <div class="flex flex-col w-[15%] max-md:w-full ">
                         <div
                             class="flex gap-2 justify-center items-center px-1 mx-auto bg-red-400 h-[40px] min-h-[40px] rounded-[50px] w-[40px] max-md:mt-5">
                             <img loading="lazy"
@@ -299,7 +316,8 @@
             </div>
 
 
-            <section class="flex  gap-5 justify-between mt-32 w-full max-w-[1200px] max-md:mt-10 max-md:max-w-full">
+            <section
+                class="flex gap-5 justify-between mt-32 w-full max-w-[1200px] max-md:mt-10  max-md:flex-col	  max-md:max-w-full">
                 <div class="flex flex-col">
                     <div class="flex flex-col w-full">
                         <div
@@ -315,7 +333,8 @@
                         class="gap-2 self-start px-10 py-3.5 mt-6 text-sm font-bold text-white bg-red-400 min-h-[47px] rounded-[99999997952px] shadow-[8px_8px_16px_rgba(201,217,232,1)] max-md:px-5">ডেমো
                         দেখুন</a>
                 </div>
-                <p class="my-auto text-sm leading-6 text-right text-gray-800 max-w-[450px]">
+                <p
+                    class="my-auto text-sm leading-6 max-md:text-lg	  max-md:text-left text-right text-gray-800 max-w-[500px]">
                     আপনি কি আপনার ব্যবসার জন্য প্রিমিয়াম, সুপারফাস্ট, এবং প্রফেশনাল ওয়েবসাইট তৈরি করতে চান কিন্তু
                     ভালো ইনভেস্টমেন্ট এবং সাপোর্ট নিয়ে চিন্তিত? চিন্তা করার কোনো দরকার নেই! আমরা আপনার জন্য এনেছি
                     এক দুর্দান্ত সমাধান।
@@ -323,47 +342,56 @@
             </section>
 
             <section
-                class="flex flex-wrap gap-5 items-center mt-16 text-2xl leading-7 text-black max-md:mt-10 max-md:max-w-full">
-                <article class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-[387px]">
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch mt-16 text-2xl leading-7 text-black max-md:mt-10 max-md:max-w-full">
+                <!-- First Article -->
+                <article
+                    class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-full max-w-[387px] mx-auto">
                     <div
-                        class="flex flex-col pt-9 pr-10 pb-5 pl-7 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
+                        class="flex flex-col flex-grow h-auto pt-9 pr-10 pb-5 pl-7 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
                         <img loading="lazy"
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/422aec677c97baa34b915980224f6848eb449c20efea9d276e454dbe5b6d0972?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                             alt="Easy website creation illustration"
                             class="object-contain self-center max-w-full aspect-[1.39] w-[193px]" />
-                        <p class="self-start mt-16 max-md:mt-10">
+                        <p class="self-start mt-8 max-md:mt-5">
                             <span class="font-medium">আপনি সহজেই এবং দ্রুত আপনার নিজস্ব</span>
                             <span class="font-medium text-sky-600"> ওয়েবসাইট তৈরি করতে পারবেন।</span>
                         </p>
                     </div>
                 </article>
-                <article class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-[386px]">
+
+                <!-- Second Article -->
+                <article
+                    class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-full max-w-[387px] mx-auto">
                     <div
-                        class="flex flex-col px-8 pt-12 pb-5 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
+                        class="flex flex-col flex-grow h-auto px-8 pt-12 pb-5 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
                         <img loading="lazy"
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/685fdacbcf1630dbd4def0b93bb1777a8afef73b574d1609af7dd969360d7720?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                             alt="Theme selection illustration"
                             class="object-contain self-center max-w-full aspect-[1.69] w-[236px]" />
-                        <p class="mt-12 max-md:mt-10">
+                        <p class="mt-8 max-md:mt-5">
                             <span class="font-medium text-red-400">আপনার শুধু একটি থিম বেছে নিতে হবে </span>
                             <span class="font-medium">এবং কিছু তথ্য শেয়ার করতে হবে।</span>
                         </p>
                     </div>
                 </article>
-                <article class="flex flex-col self-stretch my-auto text-2xl rounded-none min-w-[240px] w-[387px]">
+
+                <!-- Third Article -->
+                <article
+                    class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-full max-w-[387px] mx-auto">
                     <div
-                        class="flex flex-col py-12 pr-10 pl-8 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
+                        class="flex flex-col flex-grow h-auto py-12 pr-10 pl-8 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
                         <img loading="lazy"
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe2aff5183e5c0849c552b0aeb27b6e3b46acc82acbb5387881cf19ef157df50?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                             alt="Website launch illustration"
                             class="object-contain self-center max-w-full aspect-[1.3] w-[187px]" />
-                        <p class="self-start mt-14 max-md:mt-10">
-                            <span class="">তারপর, আপনার ওয়েবসাইটটি</span>
+                        <p class="self-start mt-8 max-md:mt-5">
+                            <span>তারপর, আপনার ওয়েবসাইটটি</span>
                             <span class="font-semibold text-purple-600">Ready to Launch!</span>
                         </p>
                     </div>
                 </article>
             </section>
+
 
             <section
                 class="flex flex-col justify-center items-center self-stretch px-16 py-28 mt-32 w-full max-md:px-5 max-md:py-24 max-md:mt-10 max-md:max-w-full"
@@ -439,190 +467,191 @@
             </section>
 
             <div
-                class="flex flex-wrap gap-10 items-center mt-20 ml-4 text-sm font-medium text-black max-md:mt-10 max-md:max-w-full">
-                <article class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-[356px]">
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center mt-20 ml-4 text-sm font-medium text-black">
+                <!-- Basic Plan -->
+                <article
+                    class="flex flex-col self-stretch my-auto rounded-none min-w-[300px] w-full sm:w-[95%] md:w-full max-w-full mx-auto">
                     <div
-                        class="flex flex-col items-start px-8 py-7 w-full bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
+                        class="flex price-card flex-col items-start px-8 py-7 w-full bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
                         <h3 class="leading-loose">Basic Plan</h3>
                         <p class="mt-6 text-3xl font-bold tracking-tight leading-none">
                             ৳ 599 <span class="text-base">/month</span>
                         </p>
-                        <ul class="flex flex-col items-start mt-6 max-w-full leading-loose text-center w-[209px]">
-                            <li class="flex gap-4 items-center">
+                        <ul class="flex flex-col items-start mt-6 leading-loose w-full">
+                            <li class="flex gap-4 items-center mt-5 first:mt-0">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">Free domain for the first year</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>Free domain for the first year</span>
                             </li>
                             <li class="flex gap-4 items-center mt-5">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">Basic hosting</span>
-                            </li>
-                            <li class="flex gap-4 items-center self-stretch mt-5 w-full">
-                                <img loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">Access to standard templates</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>Basic hosting</span>
                             </li>
                             <li class="flex gap-4 items-center mt-5">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">1 GB storage</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>Access to standard templates</span>
                             </li>
                             <li class="flex gap-4 items-center mt-5">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">24/7 email and chat support</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>1 GB storage</span>
+                            </li>
+                            <li class="flex gap-4 items-center mt-5">
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>24/7 email and chat support</span>
                             </li>
                         </ul>
                         <a href="#get-started-basic"
-                            class="gap-2 self-stretch px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 max-md:px-5 text-center">Get
+                            class="gap-2 get-start px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 text-center w-full">Get
                             Started</a>
                     </div>
                 </article>
-                <article class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-[356px]">
+
+                <!-- Standard Plan -->
+                <article
+                    class="flex flex-col self-stretch my-auto rounded-none min-w-[300px] w-full sm:w-[95%] md:w-full max-w-full mx-auto">
                     <div
-                        class="flex flex-col items-start px-8 py-7 w-full bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
+                        class="flex price-card flex-col items-start px-8 py-7 w-full bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
                         <h3 class="leading-loose">Standard Plan</h3>
                         <p class="mt-6 text-3xl font-bold tracking-tight leading-none">
                             ৳ 799 <span class="text-base">/month</span>
                         </p>
-                        <ul class="flex flex-col items-start mt-6 max-w-full leading-loose text-center w-[209px]">
-                            <li class="flex gap-4 items-center">
+                        <ul class="flex flex-col items-start mt-6 leading-loose w-full">
+                            <li class="flex gap-4 items-center mt-5 first:mt-0">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">Free domain for the first year</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>Free domain for the first year</span>
                             </li>
                             <li class="flex gap-4 items-center mt-5">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">Basic hosting</span>
-                            </li>
-                            <li class="flex gap-4 items-center self-stretch mt-5 w-full">
-                                <img loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">Access to premium templates</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>Basic hosting</span>
                             </li>
                             <li class="flex gap-4 items-center mt-5">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">1 GB storage</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>Access to premium templates</span>
                             </li>
                             <li class="flex gap-4 items-center mt-5">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">24/7 email and chat support</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>1 GB storage</span>
+                            </li>
+                            <li class="flex gap-4 items-center mt-5">
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>24/7 email and chat support</span>
                             </li>
                         </ul>
                         <a href="#get-started-standard"
-                            class="gap-2 self-stretch px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 max-md:px-5 text-center">Get
+                            class="gap-2 get-start px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 text-center w-full">Get
                             Started</a>
                     </div>
                 </article>
-                <article class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-[356px]">
+
+                <!-- Premium Plan -->
+                <article
+                    class="flex flex-col self-stretch my-auto rounded-none min-w-[300px] w-full sm:w-[95%] md:w-full max-w-full mx-auto">
                     <div
-                        class="flex flex-col items-start px-8 py-7 w-full bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
+                        class="flex price-card flex-col items-start px-8 py-7 w-full bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
                         <h3 class="leading-loose">Premium Plan</h3>
                         <p class="mt-6 text-3xl font-bold tracking-tight leading-none">
                             ৳ 899 <span class="text-base">/month</span>
                         </p>
-                        <ul class="flex flex-col items-start mt-6 max-w-full leading-loose text-center w-[209px]">
-                            <li class="flex gap-4 items-center">
+                        <ul class="flex flex-col items-start mt-6 leading-loose w-full">
+                            <li class="flex gap-4 items-center mt-5 first:mt-0">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">Free domain for the first year</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>Free domain for the first year</span>
                             </li>
                             <li class="flex gap-4 items-center mt-5">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">Basic hosting</span>
-                            </li>
-                            <li class="flex gap-4 items-center self-stretch mt-5 w-full">
-                                <img loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">Access to all templates</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>Basic hosting</span>
                             </li>
                             <li class="flex gap-4 items-center mt-5">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">1 GB storage</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>Access to all templates</span>
                             </li>
                             <li class="flex gap-4 items-center mt-5">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    alt="Checkmark"
-                                    class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-                                <span class="self-stretch my-auto">24/7 email and chat support</span>
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>1 GB storage</span>
+                            </li>
+                            <li class="flex gap-4 items-center mt-5">
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                                    alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
+                                <span>24/7 email and chat support</span>
                             </li>
                         </ul>
                         <a href="#get-started-premium"
-                            class="gap-2 self-stretch px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 max-md:px-5 text-center">Get
+                            class="gap-2 get-start px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 text-center w-full">Get
                             Started</a>
                     </div>
                 </article>
             </div>
 
-            <div class="w-[1440px] m-[100px] h-[505px] relative" style="overflow: hidden;">
-                <div class="w-[1440px] h-[505px] left-0 top-0 absolute bg-[#000828]"></div>
-                <div class="opacity-20 w-[1226px] h-[259px] left-[107px] top-[344px] absolute">
-                    <img class="w-[388px] h-[259px] left-0 top-0 absolute mix-blend-screen rounded-xl"
+
+
+            <div class="w-full h-auto max-w-[1440px] mx-auto my-[50px] h-auto relative" style="overflow: hidden;">
+                <div class="w-full h-[505px]  bg-[#000828]"></div>
+                <div
+                    class="opacity-20 w-full max-w-[1226px] mx-auto h-[259px] top-[344px] absolute flex justify-around">
+                    <img class="w-[30%] h-auto mix-blend-screen rounded-xl"
                         src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/0d373b57e250525e2556015c5ad6fe84f66f2f632357a97c5de6e73043c0e0d51628682335902.jpg" />
-                    <img class="w-[387.34px] h-[258.64px] left-[421px] top-0 absolute mix-blend-screen rounded-xl"
+                    <img class="w-[30%] h-auto mix-blend-screen rounded-xl"
                         src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/0d373b57e250525e2556015c5ad6fe84f66f2f632357a97c5de6e73043c0e0d51628682335902.jpg" />
-                    <img class="w-[385px] h-[257px] left-[841px] top-0 absolute mix-blend-screen rounded-xl"
+                    <img class="w-[30%] h-auto mix-blend-screen rounded-xl"
                         src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/0d373b57e250525e2556015c5ad6fe84f66f2f632357a97c5de6e73043c0e0d51628682335902.jpg" />
                 </div>
                 <div
-                    class="w-[944px] h-[293px] left-[250px] top-[134px] absolute opacity-30 bg-[#187bd8] rounded-full blur-[200px]">
+                    class="w-[90%] sm:w-[944px] h-[293px] left-1/2 transform -translate-x-1/2 top-[134px] absolute opacity-30 bg-[#187bd8] rounded-full blur-[200px]">
                 </div>
                 <div
-                    class="w-[195px] h-[47px] px-[39px] py-6 left-[622px] top-[392px] absolute bg-white rounded-[100px] shadow border-4 border-[#eeeeee]/20 justify-center items-center gap-2 inline-flex">
+                    class="w-[195px] h-[47px] px-6 py-3 left-1/2 transform -translate-x-1/2 top-[392px] absolute bg-white rounded-full shadow border-4 border-[#eeeeee]/20 flex justify-center items-center">
                     <div class="text-[#251c29] text-sm font-bold font-['Baloo Da 2'] leading-[21px]">এখন শুরু করুন</div>
                 </div>
                 <div
-                    class="w-[478px] left-[481px] top-[93px] absolute text-center text-[#2e98fc] text-3xl font-bold font-['Baloo Da 2'] leading-[33px]">
-                    আমাদের মিশন এবং ভিশন</div>
+                    class="w-[90%] sm:w-[478px] left-1/2 transform -translate-x-1/2 top-[93px] absolute text-center text-[#2e98fc] text-2xl sm:text-3xl font-bold font-['Baloo Da 2'] leading-[33px]">
+                    আমাদের মিশন এবং ভিশন
+                </div>
                 <div
-                    class="w-[896px] left-[272px] top-[152px] absolute text-center text-white text-base font-medium font-['Baloo Da 2'] leading-[23px]">
+                    class="w-[90%] sm:w-[90%] left-1/2 transform -translate-x-1/2 top-[152px] absolute text-center text-white text-sm sm:text-base font-medium font-['Baloo Da 2'] leading-[23px]">
                     আমরা চাই বাংলাদেশের প্রতিটি উদ্দোক্তার স্বপ্নকে বাস্তবে রূপ দিতে। কোনো স্বপ্ন যেনো বিনিয়োগের অভাবে
                     বা সঠিক গাইডলাইন ও সাপোর্টের কারণে থেমে না যায়। আমরা ইকমনেস্ট-এর মাধ্যমে উদ্দোক্তাদের হাতে তুলে
                     দিতে চাই প্রিমিয়াম, সুপার ফাস্ট এবং সম্পূর্ণ কাস্টমাইজযোগ্য ওয়েবসাইট কোনো বড় ইনভেস্টমেন্ট ছাড়াই,
                     শুধু নামমাত্র মাসিক সাবস্ক্রিপশনে।
                 </div>
-                <div class="w-[523px] h-[67.25px] left-[456px] top-[281px] absolute">
+                <div class="w-[90%] sm:w-[95%] left-1/2 transform -translate-x-1/2 top-[281px] absolute" style="
+                margin-top: 40px;
+            ">
                     <div
-                        class="w-[523px] left-0 top-0 absolute text-center text-white text-xl font-semibold font-['Baloo Da 2'] leading-snug">
+                        class="w-full text-center text-white text-base sm:text-xl font-semibold font-['Baloo Da 2'] leading-snug">
                         আমাদের লক্ষ্য হচ্ছে উদ্দোক্তারা যেন সঠিক সাপোর্ট পায় এবং তাদের বিজনেস বা স্বপ্নকে বাস্তব রূপে
-                        নিয়ে আসতে পারে।</div>
+                        নিয়ে আসতে পারে।
+                    </div>
                 </div>
             </div>
+
 
             <footer class="mt-20 w-full max-w-[1200px] max-md:mt-10 max-md:max-w-full">
                 <div class="flex gap-5 max-md:flex-col">
@@ -745,6 +774,52 @@
 
         </div>
     </header>
+
+    <div class=" z-100 fixed bottom-[10px] w-[99%] h-[80px] md:hidden left-1/2 transform -translate-x-1/2">
+        <!-- Group 469458 -->
+        <div class="w-[100%] h-[80px] mx-auto flex items-center justify-center">
+            <!-- Rectangle 4381 -->
+            <div
+                class="w-full h-[80px] rounded-full bg-white shadow-[0_4px_8px_rgba(0,0,0,0.1)] box-border flex items-center justify-between px-[20px]">
+                <!-- Frame 1171275707 -->
+                <div class="flex flex-row items-center justify-around w-full h-[45px]">
+                    <!-- Frame 1171275703 -->
+                    <div class="flex flex-col items-center justify-center w-[80px] h-[45px] gap-[5px]">
+                        <!-- FontAwesome Icon -->
+                        <i class="fas fa-home text-[#187BD9] text-[24px]"></i>
+                        <!-- Home -->
+                        <div class="text-[14px] leading-[23px] text-center text-[#187BD9] font-normal">Home</div>
+                    </div>
+
+                    <!-- Frame 1171275706 -->
+                    <div class="flex flex-col items-center justify-center w-[80px] h-[45px] gap-[5px]">
+                        <!-- FontAwesome Icon -->
+                        <i class="fas fa-th-large text-[#2A2367] text-[24px]"></i>
+                        <!-- Package -->
+                        <div class="text-[14px] leading-[23px] text-center text-[#2D3238] font-normal">Package</div>
+                    </div>
+
+                    <!-- Frame 1171275704 -->
+                    <div class="flex flex-col items-center justify-center w-[80px] h-[45px] gap-[5px]">
+                        <!-- FontAwesome Icon -->
+                        <i class="fas fa-play-circle text-[#2A2367] text-[24px]"></i>
+                        <!-- Tutorial -->
+                        <div class="text-[14px] leading-[23px] text-center text-[#2D3238] font-normal">Tutorial</div>
+                    </div>
+
+                    <!-- Frame 1171275705 -->
+                    <div class="flex flex-col items-center justify-center w-[80px] h-[45px] gap-[5px]">
+                        <!-- FontAwesome Icon -->
+                        <i class="fas fa-comments text-[#2A2367] text-[24px]"></i>
+                        <!-- Live chat -->
+                        <div class="text-[14px] leading-[23px] text-center text-[#2D3238] font-normal">Live chat</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 <script>
     AOS.init();
