@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         body {
             font-family: 'Anek Bangla', sans-serif;
@@ -24,6 +26,13 @@
         .for-bg {
             margin: auto;
             background: url('background.svg');
+        }
+
+        @media only screen and (max-width: 768px) {
+            .for-bg {
+                background: transparent;
+            }
+
         }
 
         .brands {
@@ -49,6 +58,11 @@
         .get-start {
             box-shadow: inset 0px 4px 4px #DCE4EE;
         }
+
+        .line-box {
+            background: #FFFFFF;
+            box-shadow: 3.928px 3.928px 7.856px rgba(136, 150, 163, 0.2), -3.1424px -3.1424px 7.856px rgba(255, 255, 255, 0.2), inset -3.928px -3.928px 7.856px rgba(136, 150, 163, 0.25);
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -58,93 +72,105 @@
 
 <body>
 
-    <header class="flex overflow-hidden flex-col items-center px-20 pt-1 pb-6 bg-slate-100 max-md:px-5 max-md:pt-4">
+    <header class="flex overflow-hidden flex-col items-center px-20 pt-1 pb-6 bg-slate-100 max-md:px-5 max-md:pt-4 "
+        style="margin-bottom: 100px;">
         <div class="main-container flex flex-col p-1 items-center m-a w-full max-w-[1440px] max-md:max-w-full">
 
             <div
                 class="for-bg main-container flex flex-col p-1 items-center m-a w-full max-w-[1440px] max-md:max-w-full">
 
-
                 <nav data-aos="fade-down" data-aos-delay="200"
-                    class="navbar flex gap-5 justify-between items-center px-7 py-4 w-full bg-white max-w-[1200px] h-[80px] left-[calc(50%-600px)] top-[179px] rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2),_-4px_-4px_10px_rgba(255,255,255,0.2),_inset_-5px_-5px_10px_rgba(136,150,163,0.25)] max-lg:left-0 max-md:px-5 max-md:max-w-full max-md:rounded-[50px] max-md:h-[70px] max-sm:gap-3 max-sm:h-auto">
-
-                    <!-- Logo -->
-                    <img loading="lazy"
+                    class="navbar flex gap-5 justify-between items-center px-7 py-4 w-full bg-white max-w-[1200px] h-[80px] left-[calc(50%-600px)] top-[179px] rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2),_-4px_-4px_10px_rgba(255,255,255,0.2),_inset_-5px_-5px_10px_rgba(136,150,163,0.25)] max-lg:left-0 max-md:px-5 max-md:max-w-full max-md:rounded-[50px] max-md:h-[70px] max-md:shadow-none max-md:bg-transparent max-sm:gap-3 max-sm:h-auto">
+                    <img loading="lazy" data-aos="zoom-in" data-aos-delay="300"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/e74d0d3fa353d66c694249f1b8de4365fb9c2cdc48495d426cc931359e4aa6f9?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                         alt="Ecom Nest Logo" class="object-contain shrink-0 my-auto w-28 max-w-full max-sm:w-20" />
 
-                    <!-- Navigation Links -->
-                    <ul
+                    <ul data-aos="fade-up" data-aos-delay="350"
                         class="flex gap-8 items-center text-base font-medium text-slate-950 max-md:gap-5 max-md:text-sm max-md:max-w-full max-sm:flex-col max-sm:gap-3 max-sm:items-start max-md:hidden">
-                        <li><a href="#home">Home</a></li>md
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#achievements">Achievements</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
 
-                    <!-- Buttons -->
                     <div class="flex gap-2 items-center text-sm font-bold max-md:text-xs max-sm:gap-3">
-                        <a href="#login"
-                            class="flex items-center justify-center px-6 py-3 gap-2 w-[90px] h-[47px] bg-[#ECF1F7] shadow-inner rounded-full max-sm:w-full max-sm:text-center">Log
-                            in</a>
-                        <a href="#get-started"
-                            class="flex items-center justify-center px-6 py-3 gap-2 w-[128px] h-[47px] bg-[#FB6377] shadow-inner rounded-full text-white max-sm:w-full max-sm:text-center">Get
-                            Started</a>
+                        <a href="#login" data-aos="fade-up-right" data-aos-delay="400" style="border: 1px solid #e6e6e6;
+                        box-shadow: -5px -6px 10px white, 4px 4px 20px 0px #d8ebff;"
+                            class="flex items-center justify-center px-6 py-3 gap-2 w-[90px] h-[47px] bg-[#ECF1F7] shadow-inner rounded-full max-sm:w-full max-sm:text-center max-md:bg-[#ffffff] max-md:shadow-none shadow-[8px_8px_16px_#C9D9E8,_-8px_-8px_16px_#FFFFFF]">
+                            Log in
+                        </a>
+                        <a href="#get-started" data-aos="fade-up-left" data-aos-delay="500"
+                            class="flex items-center justify-center px-6 py-3 gap-2 w-[128px] h-[47px] bg-[#FB6377] shadow-inner rounded-full text-white max-sm:w-full max-md:hidden max-sm:text-center ">
+                            Get Started
+                        </a>
                     </div>
                 </nav>
 
-                <section class="overflow-auto self-stretch px-6 py-1.5 mx-auto w-full max-w-[400px]">
-                    <h2 class="text-sm font-semibold leading-loose text-center text-white bg-blue-500 rounded-[50px]">
-                        Welcome to Ecom nest</h2>
+                <section data-aos="fade-right" data-aos-delay="300"
+                    class="overflow-auto self-stretch px-6 py-1.5 mx-auto w-full max-w-[400px]">
+                    <h2 class="text-sm font-semibold leading-loose text-center text-white bg-blue-500 rounded-[50px]"
+                        style="background: #2483DC; box-shadow: inset 0 3.19px 8px 0px #0000002e, inset 0px -3px 5px #72b4ff; width: max-content; padding: 2px 33px; font-family: sans-serif; margin: auto; font-weight: 500;">
+                        Welcome to Ecom nest
+                    </h2>
                 </section>
 
                 <h1 data-aos="zoom-in" data-aos-delay="400"
-                    class="mt-10 text-4xl font-bold text-center text-slate-950 w-[710px] max-md:max-w-full max-sm:text-2xl">
+                    class="mt-5 text-4xl font-bold text-center text-slate-950 w-[710px] max-md:max-w-full max-sm:text-[20px] flex flex-col leading-7">
                     <span class="font-semibold">আমাদের প্ল্যাটফর্ম আপনাকে অল্প টাকায়</span>
                     <span class="font-semibold text-blue-500">ব্যবসা করতে সাহায্য করে</span>
                 </h1>
 
                 <p data-aos="fade-right" data-aos-delay="500"
+                    style="font-size: 14px; color: #2D3238; line-height: 23px;"
                     class="mt-4 w-96 text-sm text-center text-gray-800 max-sm:w-full">
                     Start and grow your business with minimal investment using our user-friendly platform.
                 </p>
 
                 <div data-aos="fade-left" data-aos-delay="600"
                     class="flex gap-3.5 items-center mt-12 text-sm font-bold max-md:mt-10 max-sm:gap-3">
-                    <a href="#demo"
-                        class="px-10 py-3.5 text-white bg-red-400 rounded-[9999px] shadow-[8px_8px_16px_rgba(201,217,232,1)] max-sm:px-5">
+                    <a href="#demo" data-aos="flip-left" data-aos-delay="700"
+                        class="px-10 py-3.5 text-white bg-red-400 rounded-[9999px] shadow-[8px_8px_16px_rgba(201,217,232,1)] max-sm:px-10">
                         ডেমো দেখুন
                     </a>
-                    <a href="#start-now"
-                        class="px-10 py-3.5 bg-slate-50 rounded-[50px] shadow-[8px_8px_16px_rgba(201,217,232,1)] text-neutral-800 max-sm:px-5">
+                    <a href="#start-now" data-aos="flip-right" data-aos-delay="800"
+                        style="border: 1px solid rgb(232, 232, 232); background: #FAFBFD; box-shadow: 8px 8px 16px #C9D9E8, -8px -8px 16px #FFFFFF;"
+                        class="px-10 py-3.5 bg-slate-50 rounded-[50px] text-neutral-800 max-sm:px-10">
                         এখন শুরু করুন
                     </a>
                 </div>
 
             </div>
 
-            <div
+            <div data-aos="fade-up" data-aos-delay="200"
                 class="flex silder-container gap-9 items-center mt-20 text-sm font-bold text-neutral-800 max-md:mt-10 max-md:max-w-full">
-                <img loading="lazy"
+
+                <img loading="lazy" data-aos="fade-right" data-aos-delay="300"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/85abbd80b8cd308f5b4b7ec1081c8ee6fa4530eca5c89dbb4352fd79b137aff1?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                     alt="Ecom Nest Platform Preview"
                     class="object-contain self-stretch my-auto rounded-none aspect-[1.44] min-w-[240px] w-[345px]" />
-                <div class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-[423px] max-md:max-w-full">
-                    <div
+
+                <div data-aos="zoom-in" data-aos-delay="400"
+                    class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-[423px] max-md:max-w-full">
+
+                    <div data-aos="fade-up" data-aos-delay="500"
                         class="flex flex-col justify-center px-4 py-5 rounded-2xl bg-slate-100 shadow-[-1px_-1px_0px_rgba(255,255,255,1)] max-md:max-w-full">
-                        <div
+
+                        <div data-aos="zoom-in" data-aos-delay="600"
                             class="flex relative flex-col items-center px-11 pt-48 pb-5 w-full rounded-xl aspect-[1.5] shadow-[-8px_-8px_16px_rgba(255,255,255,1)] max-md:px-5 max-md:pt-24">
+
                             <img loading="lazy"
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/f66425c3604b1eba5cad9e6b408fc56ebc78110ecbb8dc4374b03395aae0ebb1?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                 alt="Ecom Nest Platform Demo" class="object-cover absolute inset-0 size-full" />
-                            <a href="#view-demo"
+
+                            <a href="#view-demo" data-aos="fade-up" data-aos-delay="700"
                                 class="relative gap-2 self-stretch px-10 py-3.5 bg-white min-h-[47px] rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] max-md:px-5 text-center">View
                                 demo</a>
                         </div>
                     </div>
                 </div>
-                <img loading="lazy"
+
+                <img loading="lazy" data-aos="fade-left" data-aos-delay="300"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/198d0b806397004927bd4ab6892c5db6df287a847ae465fc319f7f61ce3391d5?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                     alt="Ecom Nest Platform Features"
                     class="object-contain self-stretch my-auto rounded-none aspect-[1.44] min-w-[240px] w-[345px]" />
@@ -184,10 +210,12 @@
                 </div>
             </section>
 
-            <section
+            <section data-aos="fade-up" data-aos-delay="200"
                 class="flex flex-col self-stretch px-20 pt-14 pb-32 mt-24 bg-gradient-to-b from-[#187BD9] to-[#005DB5] pointer-events-auto max-md:px-5 max-md:pb-24 max-md:mt-10 max-md:max-w-full">
+
                 <div class="flex flex-col -mb-6 max-md:mb-2.5 max-md:max-w-full">
-                    <header class="flex flex-col items-center self-center max-w-full w-[456px]">
+                    <header data-aos="zoom-in" data-aos-delay="300"
+                        class="flex flex-col items-center self-center max-w-full w-[456px]">
                         <div
                             class="flex overflow-hidden gap-2.5 items-center p-2.5 bg-blue-500 h-[42px] rounded-[32px] w-[42px]">
                             <img loading="lazy"
@@ -198,15 +226,16 @@
                             class="self-stretch mt-5 text-3xl font-bold tracking-tight leading-none text-center text-white max-md:max-w-full">
                             স্বপ্নকে বাস্তবে রূপ দিন
                         </h2>
-                        <p class="mt-5 text-base font-medium leading-6 text-center text-white max-md:max-w-full">
-                            বাংলাদেশে আমরাইপ্রথমউদ্দোক্তাদের জন্যনিয়েএসেছিসবচেয়ে সহজএবংসাশ্রয়ী সমাধান।
+                        <p class="mt-5 text-[13px] font-medium leading-6 text-center text-white max-md:max-w-full">
+                            বাংলাদেশে আমরাই প্রথম উদ্দোক্তাদের জন্য নিয়ে এসেছি সবচেয়ে সহজ এবং সাশ্রয়ী সমাধান।
                         </p>
                     </header>
+
                     <div class="flex flex-wrap gap-5 mt-16 min-h-[214px] max-md:mt-10">
-                        <article
+                        <article data-aos="fade-up" data-aos-delay="400"
                             class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
-                                class="flex gap-2 justify-center items-center self-center px-5 bg-slate-100 h-[60px] min-h-[60px]  rounded-[50px] w-[60px]box-border flex flex-row justify-center items-center p-[13px_24px] gap-2 w-15 h-15 bg-[#ECF1F7] shadow-inner shadow-[#DCE4EE] rounded-full flex-none order-none grow-0">
+                                class="flex gap-2 justify-center items-center self-center px-5 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccd96f449eff78b0d44ca40ce66dd8076c2204e0015d355e14bb65340afccfd9?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     class="object-contain self-stretch my-auto w-6 aspect-square" alt="" />
@@ -218,10 +247,10 @@
                             </div>
                         </article>
 
-                        <article
+                        <article data-aos="fade-up" data-aos-delay="500"
                             class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
-                                class="box-border flex flex-row justify-center items-center p-[13px_24px] gap-2 w-15 h-15 bg-[#ECF1F7] shadow-inner shadow-[#DCE4EE] rounded-full flex-none order-none grow-0 flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
+                                class="flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/65eb618707d73d6b41366b1702b4e33923bed588318964246f58be02c165e56b?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     class="object-contain self-stretch my-auto aspect-[1.15] w-[30px]" alt="" />
@@ -234,10 +263,10 @@
                             </div>
                         </article>
 
-                        <article
+                        <article data-aos="fade-up" data-aos-delay="600"
                             class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
-                                class="box-border flex flex-row justify-center items-center p-[13px_24px] gap-2 w-15 h-15 bg-[#ECF1F7] shadow-inner shadow-[#DCE4EE] rounded-full flex-none order-none grow-0 flex gap-2 justify-center items-center self-center px-3.5 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
+                                class="flex gap-2 justify-center items-center self-center px-3.5 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/d589aafdfa3d2dd6fbc6a38718c640067785d26c6a140c59d9f139ded398a082?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     class="object-contain self-stretch my-auto aspect-[1.31] w-[34px]" alt="" />
@@ -250,26 +279,10 @@
                             </div>
                         </article>
 
-                        <article
+                        <article data-aos="fade-up" data-aos-delay="700"
                             class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
                             <div
-                                class="box-border flex flex-row justify-center items-center p-[13px_24px] gap-2 w-15 h-15 bg-[#ECF1F7] shadow-inner shadow-[#DCE4EE] rounded-full flex-none order-none grow-0 flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
-                                <img loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/dbe6d14d627c529af34cc087f37009be9cdbc62f9233c22deb067bcb29b7b45e?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                    class="object-contain self-stretch my-auto aspect-square w-[26px]" alt="" />
-                            </div>
-                            <div class="flex flex-col justify-center mt-4 w-full text-center">
-                                <h3 class="self-center text-base font-semibold leading-loose text-slate-950">Easy-to-use
-                                    platform</h3>
-                                <p class="mt-1.5 text-sm leading-5 text-gray-800">সহজেই ব্যবহারযোগ্য <br /> প্ল্যাটফর্ম
-                                </p>
-                            </div>
-                        </article>
-
-                        <article
-                            class="flex flex-col grow shrink px-4 pt-8 pb-10 bg-white rounded-3xl shadow-[10px_10px_10px_rgba(0,83,161,0.5),-4px_-4px_10px_#389EFF,inset_-5px_-5px_10px_#CCE6FF] w-[179px]">
-                            <div
-                                class="box-border flex flex-row justify-center items-center p-[13px_24px] gap-2 w-15 h-15 bg-[#ECF1F7] shadow-inner shadow-[#DCE4EE] rounded-full flex-none order-none grow-0 flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
+                                class="flex gap-2 justify-center items-center self-center px-4 bg-slate-100 h-[60px] min-h-[60px] rounded-[50px] w-[60px]">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/dbe6d14d627c529af34cc087f37009be9cdbc62f9233c22deb067bcb29b7b45e?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     class="object-contain self-stretch my-auto aspect-square w-[26px]" alt="" />
@@ -286,68 +299,62 @@
                 </div>
             </section>
 
-            <div
-                class="z-10 px-5 py-4 -mt-12 w-full bg-white rounded-[100px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] w-[100%] max-w-[400px] max-md:min-w-[600px] max-md:scale-[0.8] ">
-                <div class="flex max-md:align-center justify-between">
-                    <div class="flex flex-col w-[15%] max-md:w-full">
-                        <div
-                            class="flex gap-2 justify-center items-center px-1 mx-auto bg-slate-100 h-[40px] min-h-[40px] rounded-[50px] w-[40px] max-md:mt-5">
-                            <img loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/76247ec60ed86c9d774470fbac4c008b4cb6a1b6c28bedda3d213aaaed21b888?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                alt="Support icon" class="object-contain self-stretch my-auto aspect-square w-[25px]" />
-                        </div>
-                    </div>
-                    <div class="flex flex-col w-[100%%] max-md:w-full text-center	">
-                        <div class="flex flex-col justify-center self-stretch my-auto max-md:mt-5">
-                            <h3 class="text-sm font-semibold leading-loose text-slate-950">সম্পূর্ণ কাস্টমাইজযোগ্য
-                                ডিজাইন</h3>
-                            <p class="mt-1 text-xs text-gray-800">24/7 personal support via WhatsApp</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col w-[15%] max-md:w-full ">
-                        <div
-                            class="flex gap-2 justify-center items-center px-1 mx-auto bg-red-400 h-[40px] min-h-[40px] rounded-[50px] w-[40px] max-md:mt-5">
-                            <img loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f59351d5974725bd8543c07c8e1729a08ce6b448b22539e52d35e82d11e0433c?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
-                                alt="WhatsApp icon" class="object-contain self-stretch my-auto w-4 aspect-square" />
-                        </div>
-                    </div>
+            <div data-aos="fade-up" data-aos-delay="200"
+                class="line-box relative top-[-40px] flex item-center justify-center bg-white border-[1px] p-[10px] rounded-[70px]">
+
+                <img data-aos="zoom-in" data-aos-delay="300"
+                    class="bg-gradient-to-r from-[#EFEFEF] to-[#B7BEC491] w-[50px] h-[50px] p-[10px] rounded-[50%]"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/76247ec60ed86c9d774470fbac4c008b4cb6a1b6c28bedda3d213aaaed21b888?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                    alt="">
+
+                <div data-aos="fade-left" data-aos-delay="400" class="text-box p-[0px 5px] text-center mx-[10px]">
+                    <h3 style="font-weight: 600;">সম্পূর্ণ কাস্টমাইজ যোগ্য ডিজাইন</h3>
+                    <p style="color: #2D3238;">24/7 personal support via WhatsApp</p>
                 </div>
+
+                <img data-aos="zoom-in" data-aos-delay="300"
+                    class="bg-[#FB6377] w-[50px] h-[50px] p-[10px] rounded-[50%]"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/f59351d5974725bd8543c07c8e1729a08ce6b448b22539e52d35e82d11e0433c?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                    alt="">
             </div>
 
+            <section data-aos="fade-up" data-aos-delay="200"
+                class="flex gap-5 justify-between mt-32 w-full max-w-[1200px] max-md:mt-10 max-md:flex-col max-md:max-w-full">
 
-            <section
-                class="flex gap-5 justify-between mt-32 w-full max-w-[1200px] max-md:mt-10  max-md:flex-col	  max-md:max-w-full">
                 <div class="flex flex-col">
                     <div class="flex flex-col w-full">
-                        <div
+                        <div data-aos="zoom-in" data-aos-delay="300"
                             class="flex overflow-hidden gap-2.5 justify-center items-center px-2.5 w-12 h-12 bg-sky-600 min-h-[48px] rounded-[32px]">
                             <img loading="lazy"
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/71842d69f77ddcb6ad03477bdb9a5d2ad28d3b67ec0612f5d2b3610d795482f1?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                 alt="Entrepreneur icon"
                                 class="object-contain self-stretch my-auto aspect-square w-[22px]" />
                         </div>
-                        <h2 class="mt-4 text-3xl font-bold leading-none text-black">আপনি কি একজন উদ্যোক্তা?</h2>
+                        <h2 data-aos="fade-right" data-aos-delay="400"
+                            class="mt-4 text-3xl font-bold leading-none text-black">আপনি কি একজন উদ্যোক্তা?</h2>
                     </div>
-                    <a href="#demo"
-                        class="gap-2 self-start px-10 py-3.5 mt-6 text-sm font-bold text-white bg-red-400 min-h-[47px] rounded-[99999997952px] shadow-[8px_8px_16px_rgba(201,217,232,1)] max-md:px-5">ডেমো
-                        দেখুন</a>
+                    <a href="#demo" data-aos="fade-up" data-aos-delay="500"
+                        class="gap-2 self-start px-10 py-3.5 mt-6 text-sm font-bold text-white bg-red-400 min-h-[47px] rounded-[99999997952px] shadow-[8px_8px_16px_rgba(201,217,232,1)] max-md:p-[15px 34px]">
+                        ডেমো দেখুন
+                    </a>
                 </div>
-                <p
-                    class="my-auto text-sm leading-6 max-md:text-lg	  max-md:text-left text-right text-gray-800 max-w-[500px]">
-                    আপনি কি আপনার ব্যবসার জন্য প্রিমিয়াম, সুপারফাস্ট, এবং প্রফেশনাল ওয়েবসাইট তৈরি করতে চান কিন্তু
-                    ভালো ইনভেস্টমেন্ট এবং সাপোর্ট নিয়ে চিন্তিত? চিন্তা করার কোনো দরকার নেই! আমরা আপনার জন্য এনেছি
-                    এক দুর্দান্ত সমাধান।
+
+                <p data-aos="fade-left" data-aos-delay="400"
+                    class="my-auto text-sm leading-6 max-md:text-lg max-md:text-left text-right text-gray-800 max-w-[500px]">
+                    আপনি কি আপনার ব্যবসার জন্য প্রিমিয়াম, সুপারফাস্ট, এবং প্রফেশনাল ওয়েবসাইট তৈরি করতে চান কিন্তু ভালো
+                    ইনভেস্টমেন্ট এবং সাপোর্ট নিয়ে চিন্তিত? চিন্তা করার কোনো দরকার নেই! আমরা আপনার জন্য এনেছি এক
+                    দুর্দান্ত সমাধান।
                 </p>
             </section>
 
-            <section
+            <section data-aos="fade-up" data-aos-delay="200"
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch mt-16 text-2xl leading-7 text-black max-md:mt-10 max-md:max-w-full">
+
                 <!-- First Article -->
-                <article
-                    class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-full max-w-[387px] mx-auto">
+                <article data-aos="fade-up" data-aos-delay="300"
+                    class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-full max-w-[387px] mx-auto ">
                     <div
-                        class="flex flex-col flex-grow h-auto pt-9 pr-10 pb-5 pl-7 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
+                        class="flex flex-col flex-grow h-auto pt-9 pr-10 pb-5 pl-7 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5 border-[1px] border-solid border-[#e4e4e4]">
                         <img loading="lazy"
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/422aec677c97baa34b915980224f6848eb449c20efea9d276e454dbe5b6d0972?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                             alt="Easy website creation illustration"
@@ -360,10 +367,10 @@
                 </article>
 
                 <!-- Second Article -->
-                <article
+                <article data-aos="fade-up" data-aos-delay="400"
                     class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-full max-w-[387px] mx-auto">
                     <div
-                        class="flex flex-col flex-grow h-auto px-8 pt-12 pb-5 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
+                        class="flex flex-col flex-grow h-auto px-8 pt-12 pb-5 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5 border-[1px] border-solid border-[#e4e4e4]">
                         <img loading="lazy"
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/685fdacbcf1630dbd4def0b93bb1777a8afef73b574d1609af7dd969360d7720?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                             alt="Theme selection illustration"
@@ -376,10 +383,10 @@
                 </article>
 
                 <!-- Third Article -->
-                <article
+                <article data-aos="fade-up" data-aos-delay="500"
                     class="flex flex-col self-stretch my-auto rounded-none min-w-[240px] w-full max-w-[387px] mx-auto">
                     <div
-                        class="flex flex-col flex-grow h-auto py-12 pr-10 pl-8 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
+                        class="flex flex-col flex-grow h-auto py-12 pr-10 pl-8 bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5 border-[1px] border-solid border-[#e4e4e4]">
                         <img loading="lazy"
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe2aff5183e5c0849c552b0aeb27b6e3b46acc82acbb5387881cf19ef157df50?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                             alt="Website launch illustration"
@@ -392,14 +399,15 @@
                 </article>
             </section>
 
-
-            <section
+            <section data-aos="fade-up" data-aos-delay="200"
                 class="flex flex-col justify-center items-center self-stretch px-16 py-28 mt-32 w-full max-md:px-5 max-md:py-24 max-md:mt-10 max-md:max-w-full"
-                style="
-                background: linear-gradient(181deg, #D5E5F4, transparent);">
+                style="background: linear-gradient(181deg, #D5E5F4, transparent);">
+
                 <div class="mb-0 w-full max-w-[1163px] max-md:mb-2.5 max-md:max-w-full">
                     <div class="flex gap-5 max-md:flex-col">
-                        <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+
+                        <div data-aos="fade-right" data-aos-delay="300"
+                            class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
                             <div class="flex flex-col max-md:mt-10 max-md:max-w-full">
                                 <div class="flex flex-col w-full max-md:max-w-full">
                                     <div
@@ -412,42 +420,58 @@
                                     <div class="flex flex-col mt-7 w-full max-md:max-w-full">
                                         <h2 class="text-3xl font-bold leading-none text-black max-md:max-w-full">
                                             আমাদের কেনো বেছে নিবেন?</h2>
-                                        <p class="mt-3 text-base leading-6 text-gray-800 max-md:max-w-full">
+                                        <p
+                                            class="mt-3 text-base leading-6 text-gray-800 max-md:max-w-full max-md:text-[20px] leading-[30px]">
                                             আমরাই কমনেস্ট, দিচ্ছি উদ্যোক্তাদের হাতে সর্বোচ্চ মানের প্রিমিয়াম কাস্টম
                                             ওয়েবসাইট, কোনো এককালীন পেমেন্ট ছাড়াই!
                                         </p>
                                     </div>
                                 </div>
+
                                 <div class="flex flex-col mt-10 w-full max-md:max-w-full">
-                                    <div class="flex flex-col w-full max-md:max-w-full">
+                                    <div data-aos="fade-left" data-aos-delay="400"
+                                        class="flex flex-col w-full max-md:max-w-full">
                                         <h3 class="text-xl font-bold leading-none text-black max-md:max-w-full">
                                             Affordable Monthly Subscription</h3>
-                                        <p class="mt-4 text-base leading-none text-gray-800 max-md:max-w-full">
-                                            নামমাত্র মাসিক সাবস্ক্রিপশনে ওয়েবসাইট তৈরি।</p>
+                                        <p
+                                            class="mt-4 text-base leading-none text-gray-800 max-md:max-w-full max-md:text-[20px] leading-[30px]">
+                                            নামমাত্র মাসিক সাবস্ক্রিপশনে ওয়েবসাইট তৈরি।
+                                        </p>
                                         <hr
                                             class="mt-4 w-full min-h-0 border-2 border-blue-500 border-solid max-md:max-w-full" />
                                     </div>
-                                    <div class="flex flex-col mt-6 w-full max-md:max-w-full">
+
+                                    <div data-aos="fade-left" data-aos-delay="500"
+                                        class="flex flex-col mt-6 w-full max-md:max-w-full">
                                         <h3 class="text-xl font-bold leading-none text-black max-md:max-w-full">
                                             Advanced Features</h3>
-                                        <p class="mt-4 text-base leading-none text-gray-800 max-md:max-w-full">আপনার
-                                            ব্যবসার জন্য প্রয়োজনীয় সব অ্যাডভান্সড ফিচার এবং ফ্লেক্সিবিলিটি।</p>
+                                        <p
+                                            class="mt-4 text-base leading-none text-gray-800 max-md:max-w-full max-md:text-[20px] leading-[30px]">
+                                            আপনার ব্যবসার জন্য প্রয়োজনীয় সব অ্যাডভান্সড ফিচার এবং ফ্লেক্সিবিলিটি।
+                                        </p>
                                         <hr
                                             class="mt-4 w-full min-h-0 border-2 border-solid border-blue-500 border-opacity-20 max-md:max-w-full" />
                                     </div>
-                                    <div class="flex flex-col mt-6 w-full max-md:max-w-full">
+
+                                    <div data-aos="fade-left" data-aos-delay="600"
+                                        class="flex flex-col mt-6 w-full max-md:max-w-full">
                                         <h3 class="text-xl font-bold leading-none text-black max-md:max-w-full">
                                             Custom Website Solutions</h3>
-                                        <p class="mt-4 text-base leading-none text-gray-800 max-md:max-w-full">
-                                            সম্পূর্ণ কাস্টমাইজড ডিজাইন আপনার প্রয়োজন অনুযায়ী।</p>
+                                        <p
+                                            class="mt-4 text-base leading-none text-gray-800 max-md:max-w-full max-md:text-[20px] leading-[30px]">
+                                            সম্পূর্ণ কাস্টমাইজড ডিজাইন আপনার প্রয়োজন অনুযায়ী।
+                                        </p>
                                         <hr
                                             class="mt-4 w-full min-h-0 border-2 border-solid border-blue-500 border-opacity-20 max-md:max-w-full" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                            <div
+
+                        <div data-aos="fade-left" data-aos-delay="700"
+                            class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                            <div style="background: #FFFFFF;
+                            box-shadow: 3.33012px 3.33012px 6.66023px rgba(136, 150, 163, 0.2), -2.66409px -2.66409px 6.66023px rgba(255, 255, 255, 0.2), inset -3.33012px -3.33012px 6.66023px rgba(136, 150, 163, 0.25);"
                                 class="flex flex-col grow justify-center px-9 py-16 mt-14 w-full bg-white rounded-[40px] shadow-[5px_5px_10px_rgba(136,150,163,0.2)] max-md:px-5 max-md:mt-10 max-md:max-w-full">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/7600646f2e2bf50694073165b65f08c98938a3a410ffdfb13da4a9889c9d505a?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
@@ -455,21 +479,30 @@
                                     class="object-contain w-full aspect-[1.41] max-md:max-w-full" />
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
 
-            <section class="flex flex-col mt-20 max-w-full text-center w-[550px] max-md:mt-10">
-                <h2 class="text-3xl font-semibold leading-none text-black max-md:max-w-full">আপনার প্ল্যানটি সিলেক্ট
-                    করুন</h2>
-                <p class="mt-3.5 text-sm leading-loose text-gray-800 max-md:max-w-full">সামর্থ্য এবং সামর্থ্য সহ
-                    আপনার স্বপ্নের ওয়েবসাইট চালু করার নিখুঁত পরিকল্পনা পান</p>
+            <section data-aos="fade-up" data-aos-delay="200"
+                class="flex flex-col mt-20 max-w-full text-center w-[550px] max-md:mt-10">
+
+                <h2 data-aos="fade-up" data-aos-delay="300"
+                    class="text-3xl font-semibold leading-none text-black max-md:max-w-full">
+                    আপনার প্ল্যানটি সিলেক্ট করুন
+                </h2>
+
+                <p data-aos="fade-up" data-aos-delay="400"
+                    class="mt-3.5 text-sm leading-loose text-gray-600 max-md:max-w-full max-md:text-[20px]">
+                    সামর্থ্য এবং সামর্থ্য সহ আপনার স্বপ্নের ওয়েবসাইট চালু করার নিখুঁত পরিকল্পনা পান
+                </p>
             </section>
 
             <div
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center mt-20 ml-4 text-sm font-medium text-black">
+
                 <!-- Basic Plan -->
-                <article
+                <article data-aos-delay="800" data-aos="fade-right"
                     class="flex flex-col self-stretch my-auto rounded-none min-w-[300px] w-full sm:w-[95%] md:w-full max-w-full mx-auto">
                     <div
                         class="flex price-card flex-col items-start px-8 py-7 w-full bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
@@ -478,45 +511,46 @@
                             ৳ 599 <span class="text-base">/month</span>
                         </p>
                         <ul class="flex flex-col items-start mt-6 leading-loose w-full">
-                            <li class="flex gap-4 items-center mt-5 first:mt-0">
+                            <li class="flex gap-4 items-center mt-2 first:mt-0">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>Free domain for the first year</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>Basic hosting</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>Access to standard templates</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>1 GB storage</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>24/7 email and chat support</span>
                             </li>
                         </ul>
-                        <a href="#get-started-basic"
-                            class="gap-2 get-start px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 text-center w-full">Get
-                            Started</a>
+                        <div style="border: 1px solid #e0e0e0;"
+                            class="gap-2 select-theme get-start px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 text-center w-full">
+                            Get
+                            Started</div>
                     </div>
                 </article>
 
                 <!-- Standard Plan -->
-                <article
+                <article data-aos-delay="800" data-aos="fade-out"
                     class="flex flex-col self-stretch my-auto rounded-none min-w-[300px] w-full sm:w-[95%] md:w-full max-w-full mx-auto">
                     <div
                         class="flex price-card flex-col items-start px-8 py-7 w-full bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
@@ -525,45 +559,46 @@
                             ৳ 799 <span class="text-base">/month</span>
                         </p>
                         <ul class="flex flex-col items-start mt-6 leading-loose w-full">
-                            <li class="flex gap-4 items-center mt-5 first:mt-0">
+                            <li class="flex gap-4 items-center mt-2 first:mt-0">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>Free domain for the first year</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>Basic hosting</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
-                                <span>Access to premium templates</span>
+                                <span>Access to standard templates</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>1 GB storage</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>24/7 email and chat support</span>
                             </li>
                         </ul>
-                        <a href="#get-started-standard"
-                            class="gap-2 get-start px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 text-center w-full">Get
-                            Started</a>
+                        <div style="border: 1px solid #e0e0e0;"
+                            class="gap-2 select-theme get-start px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 text-center w-full">
+                            Get
+                            Started</div>
                     </div>
                 </article>
 
                 <!-- Premium Plan -->
-                <article
+                <article data-aos-delay="800" data-aos="fade-left"
                     class="flex flex-col self-stretch my-auto rounded-none min-w-[300px] w-full sm:w-[95%] md:w-full max-w-full mx-auto">
                     <div
                         class="flex price-card flex-col items-start px-8 py-7 w-full bg-white rounded-3xl shadow-[8px_8px_16px_rgba(201,217,232,0.6)] max-md:px-5">
@@ -572,48 +607,51 @@
                             ৳ 899 <span class="text-base">/month</span>
                         </p>
                         <ul class="flex flex-col items-start mt-6 leading-loose w-full">
-                            <li class="flex gap-4 items-center mt-5 first:mt-0">
+                            <li class="flex gap-4 items-center mt-2 first:mt-0">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>Free domain for the first year</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>Basic hosting</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
-                                <span>Access to all templates</span>
+                                <span>Access to standard templates</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>1 GB storage</span>
                             </li>
-                            <li class="flex gap-4 items-center mt-5">
+                            <li class="flex gap-4 items-center mt-2">
                                 <img loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccfcb92baae3404e4f41e2efcf8b3d5f18e92458da1353614c7548454d620e45?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                     alt="Checkmark" class="object-contain shrink-0 w-5 aspect-square" />
                                 <span>24/7 email and chat support</span>
                             </li>
                         </ul>
-                        <a href="#get-started-premium"
-                            class="gap-2 get-start px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 text-center w-full">Get
-                            Started</a>
+                        <div style="border: 1px solid #e0e0e0;"
+                            class="gap-2 select-theme get-start px-6 py-3.5 mt-8 font-bold bg-slate-100 rounded-[50px] text-neutral-800 text-center w-full">
+                            Get
+                            Started</div>
                     </div>
                 </article>
+
             </div>
 
+            <div class="w-full h-auto max-w-[1440px] mx-auto my-[50px] h-auto relative" style="overflow: hidden;"
+                data-aos="fade-in">
+                <div class="w-full h-[505px]  bg-[#000828]" data-aos="fade-up">
 
-
-            <div class="w-full h-auto max-w-[1440px] mx-auto my-[50px] h-auto relative" style="overflow: hidden;">
-                <div class="w-full h-[505px]  bg-[#000828]"></div>
+                </div>
                 <div
                     class="opacity-20 w-full max-w-[1226px] mx-auto h-[259px] top-[344px] absolute flex justify-around">
                     <img class="w-[30%] h-auto mix-blend-screen rounded-xl"
@@ -626,43 +664,55 @@
                 <div
                     class="w-[90%] sm:w-[944px] h-[293px] left-1/2 transform -translate-x-1/2 top-[134px] absolute opacity-30 bg-[#187bd8] rounded-full blur-[200px]">
                 </div>
-                <div
+                <div style="box-shadow: -0px -0px 21px -8px #aad6ff;
+    border: 4px solid #6d728163;"
                     class="w-[195px] h-[47px] px-6 py-3 left-1/2 transform -translate-x-1/2 top-[392px] absolute bg-white rounded-full shadow border-4 border-[#eeeeee]/20 flex justify-center items-center">
-                    <div class="text-[#251c29] text-sm font-bold font-['Baloo Da 2'] leading-[21px]">এখন শুরু করুন</div>
+                    <div class="text-[#251c29] text-sm font-bold font-['Baloo Da 2'] leading-[21px]">এখন শুরু
+                        করুন</div>
                 </div>
                 <div
                     class="w-[90%] sm:w-[478px] left-1/2 transform -translate-x-1/2 top-[93px] absolute text-center text-[#2e98fc] text-2xl sm:text-3xl font-bold font-['Baloo Da 2'] leading-[33px]">
                     আমাদের মিশন এবং ভিশন
                 </div>
-                <div
-                    class="w-[90%] sm:w-[90%] left-1/2 transform -translate-x-1/2 top-[152px] absolute text-center text-white text-sm sm:text-base font-medium font-['Baloo Da 2'] leading-[23px]">
-                    আমরা চাই বাংলাদেশের প্রতিটি উদ্দোক্তার স্বপ্নকে বাস্তবে রূপ দিতে। কোনো স্বপ্ন যেনো বিনিয়োগের অভাবে
-                    বা সঠিক গাইডলাইন ও সাপোর্টের কারণে থেমে না যায়। আমরা ইকমনেস্ট-এর মাধ্যমে উদ্দোক্তাদের হাতে তুলে
-                    দিতে চাই প্রিমিয়াম, সুপার ফাস্ট এবং সম্পূর্ণ কাস্টমাইজযোগ্য ওয়েবসাইট কোনো বড় ইনভেস্টমেন্ট ছাড়াই,
-                    শুধু নামমাত্র মাসিক সাবস্ক্রিপশনে।
-                </div>
-                <div class="w-[90%] sm:w-[95%] left-1/2 transform -translate-x-1/2 top-[281px] absolute" style="
+                <div class="textt ">
+                    <div
+                        class="w-[60%] max-md:w-[90%] left-1/2 transform -translate-x-1/2 top-[152px] absolute text-center text-white text-sm sm:text-base font-medium font-['Baloo Da 2'] leading-[23px]">
+                        আমরা চাই বাংলাদেশের প্রতিটি উদ্দোক্তার স্বপ্নকে বাস্তবে রূপ দিতে। কোনো স্বপ্ন যেনো বিনিয়োগের
+                        অভাবে
+                        বা সঠিক গাইডলাইন ও সাপোর্টের কারণে থেমে না যায়। আমরা ইকমনেস্ট-এর মাধ্যমে উদ্দোক্তাদের হাতে তুলে
+                        দিতে চাই প্রিমিয়াম, সুপার ফাস্ট এবং সম্পূর্ণ কাস্টমাইজযোগ্য ওয়েবসাইট কোনো বড় ইনভেস্টমেন্ট
+                        ছাড়াই,
+                        শুধু নামমাত্র মাসিক সাবস্ক্রিপশনে।
+                    </div>
+                    <div class="w-[60%] max-md:w-[90%]  left-1/2 transform -translate-x-1/2 top-[250px] max-md:top-[281px] absolute"
+                        style="
                 margin-top: 40px;
             ">
-                    <div
-                        class="w-full text-center text-white text-base sm:text-xl font-semibold font-['Baloo Da 2'] leading-snug">
-                        আমাদের লক্ষ্য হচ্ছে উদ্দোক্তারা যেন সঠিক সাপোর্ট পায় এবং তাদের বিজনেস বা স্বপ্নকে বাস্তব রূপে
-                        নিয়ে আসতে পারে।
+                        <div
+                            class="w-full text-center text-white text-base sm:text-xl font-semibold font-['Baloo Da 2'] leading-snug">
+                            আমাদের লক্ষ্য হচ্ছে উদ্দোক্তারা যেন সঠিক সাপোর্ট পায় এবং তাদের বিজনেস বা স্বপ্নকে বাস্তব
+                            রূপে
+                            নিয়ে আসতে পারে।
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-
             <footer class="mt-20 w-full max-w-[1200px] max-md:mt-10 max-md:max-w-full">
-                <div class="flex gap-5 max-md:flex-col">
-                    <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+                <div class="flex gap-5 max-md:flex-col" data-aos="fade-up">
+
+                    <!-- Logo and Social Links -->
+                    <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full" data-aos="fade-up">
                         <div class="flex flex-col mt-4 w-full max-md:mt-10">
                             <img loading="lazy"
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/7ecefd6db923382de577e6cfc6e64d538cca1c8e1f53d4c6294501cf6f5761b0?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
                                 alt="Ecom Nest Logo" class="object-contain max-w-full aspect-[3.1] w-[124px]" />
-                            <div class="flex gap-4 items-center mt-16 max-md:mt-10">
+                            <div class="flex gap-4 items-center mt-16 max-md:mt-10" data-aos="fade-up"
+                                data-aos-delay="100">
                                 <a href="#facebook"
-                                    class="flex gap-2 justify-center items-center self-stretch px-5 my-auto bg-slate-50 h-[50px] min-h-[50px] rounded-[50px] shadow-[8px_8px_16px_rgba(201,217,232,1)] w-[50px]"
+                                    style="border: 1px solid #dedede; box-shadow: -8px -8px 16px white, 8px 8px 16px rgb(189 205 222)"
+                                    class="flex gap-2 justify-center items-center self-stretch px-5 my-auto bg-slate-50 h-[50px] min-h-[50px] rounded-[50px] w-[50px]"
                                     aria-label="Facebook">
                                     <img loading="lazy"
                                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/0b746308279dda44943ea4aaa479823f80138a029e048bbcbc45415e4f61a22b?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
@@ -670,7 +720,8 @@
                                         class="object-contain self-stretch my-auto w-2.5 aspect-[0.5]" />
                                 </a>
                                 <a href="#twitter"
-                                    class="flex gap-2 justify-center items-center self-stretch px-4 my-auto bg-slate-50 h-[50px] min-h-[50px] rounded-[50px] shadow-[8px_8px_16px_rgba(201,217,232,1)] w-[50px]"
+                                    style="border: 1px solid #dedede; box-shadow: -8px -8px 16px white, 8px 8px 16px rgb(189 205 222)"
+                                    class="flex gap-2 justify-center items-center self-stretch px-4 my-auto bg-slate-50 h-[50px] min-h-[50px] rounded-[50px]  w-[50px]"
                                     aria-label="Twitter">
                                     <img loading="lazy"
                                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/982f8e60b3930cf57d550f0c3e0ed27026e7bef15502e2fcbf4915b65633abd1?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
@@ -678,7 +729,8 @@
                                         class="object-contain self-stretch my-auto w-5 aspect-square" />
                                 </a>
                                 <a href="#instagram"
-                                    class="flex gap-2 justify-center items-center self-stretch px-4 my-auto bg-slate-50 h-[50px] min-h-[50px] rounded-[50px] shadow-[8px_8px_16px_rgba(201,217,232,1)] w-[50px]"
+                                    style="border: 1px solid #dedede; box-shadow: -8px -8px 16px white, 8px 8px 16px rgb(189 205 222)"
+                                    class="flex gap-2 justify-center items-center self-stretch px-4 my-auto bg-slate-50 h-[50px] min-h-[50px] rounded-[50px] w-[50px]"
                                     aria-label="Instagram">
                                     <img loading="lazy"
                                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/06fb01fc1e4903c7cbdedb298cb5336117ed9360cefba357853ad2c3d35a2b09?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
@@ -686,7 +738,8 @@
                                         class="object-contain self-stretch my-auto w-5 aspect-[1.25]" />
                                 </a>
                                 <a href="#linkedin"
-                                    class="flex gap-2 justify-center items-center self-stretch px-4 my-auto bg-slate-50 h-[50px] min-h-[50px] rounded-[50px] shadow-[8px_8px_16px_rgba(201,217,232,1)] w-[50px]"
+                                    style="border: 1px solid #dedede; box-shadow: -8px -8px 16px white, 8px 8px 16px rgb(189 205 222)"
+                                    class="flex gap-2 justify-center items-center self-stretch px-4 my-auto bg-slate-50 h-[50px] min-h-[50px] rounded-[50px]  w-[50px]"
                                     aria-label="LinkedIn">
                                     <img loading="lazy"
                                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/96a6fc63f75a3ffbe6764dd9ff0fc155ea0bc8049ecfccb5bbac34aaa7ddf16f?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
@@ -696,13 +749,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-col ml-5 w-[43%] max-md:ml-0 max-md:w-full">
+
+                    <!-- Contact Details and Links -->
+                    <div class="flex flex-col ml-5 w-[43%] max-md:ml-0 max-md:w-full" data-aos="fade-right"
+                        data-aos-delay="150">
                         <div class="max-md:mt-10 max-md:max-w-full">
                             <div class="flex gap-5 max-md:flex-col">
                                 <div class="flex flex-col w-[58%] max-md:ml-0 max-md:w-full">
                                     <div class="flex flex-col max-md:mt-5">
-                                        <h3 class="text-base font-semibold leading-none text-slate-950">Contact
-                                            Details</h3>
+                                        <h3 class="text-base font-semibold leading-none text-slate-950">Contact Details
+                                        </h3>
                                         <ul
                                             class="flex flex-col mt-6 w-full text-base font-medium whitespace-nowrap text-slate-600">
                                             <li class="flex gap-4 justify-center items-center w-full">
@@ -724,7 +780,8 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <nav class="flex flex-col ml-5 w-[42%] max-md:ml-0 max-md:w-full">
+                                <nav class="flex flex-col ml-5 w-[42%] max-md:ml-0 max-md:w-full" data-aos="fade-left"
+                                    data-aos-delay="200">
                                     <div class="flex flex-col grow max-md:mt-5">
                                         <h3 class="text-base font-semibold leading-none text-slate-950">Links</h3>
                                         <ul class="flex flex-col mt-6 w-full text-base font-medium text-slate-600">
@@ -738,20 +795,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+
+                    <!-- Send Message Form -->
+                    <div class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full" data-aos="fade-up"
+                        data-aos-delay="250">
                         <div class="flex flex-col grow max-md:mt-10">
                             <h3 class="text-base font-semibold leading-none text-slate-950">Send message</h3>
                             <form class="flex flex-col mt-6 w-full text-sm text-slate-600">
                                 <label for="email" class="sr-only">Enter your email</label>
-                                <input type="email" id="email" placeholder="Enter your email"
-                                    class="gap-2 self-stretch px-6 py-3.5 w-full leading-loose text-center bg-white rounded-xl max-md:px-5"
+                                <input type="email" id="email"
+                                    style="background: #FFFFFF; box-shadow: inset 0px -3px 11px #D3DEEB;"
+                                    placeholder="Enter your email"
+                                    class="gap-2 self-stretch px-6 py-3.5 w-full leading-loose text-left bg-white rounded-xl max-md:px-5"
                                     required />
                                 <label for="message" class="sr-only">Name and Message</label>
                                 <textarea id="message" placeholder="Name and Message"
-                                    class="gap-2 px-6 pt-3.5 pb-10 mt-4 w-full leading-loose text-center bg-white rounded-xl min-h-[77px] max-md:px-5"
+                                    style="background: #FFFFFF; box-shadow: inset 0px -3px 11px #D3DEEB;"
+                                    class="gap-2 px-6 pt-3.5 pb-10 mt-4 w-full leading-loose text-left bg-white rounded-xl min-h-[77px] max-md:px-5"
                                     required></textarea>
                                 <button type="submit"
-                                    class="gap-2 self-start px-6 py-3.5 mt-4 font-bold text-white bg-red-400 rounded-[50px] max-md:px-5">Get
+                                    class="gap-2 self-start px-6 py-3.5 mt-4 font-bold text-white bg-red-400 rounded-[50px] max-md:px-10">Get
                                     Started</button>
                             </form>
                         </div>
@@ -780,7 +843,7 @@
         <div class="w-[100%] h-[80px] mx-auto flex items-center justify-center">
             <!-- Rectangle 4381 -->
             <div
-                class="w-full h-[80px] rounded-full bg-white shadow-[0_4px_8px_rgba(0,0,0,0.1)] box-border flex items-center justify-between px-[20px]">
+                class="w-full h-[80px] rounded-full bg-white line-box box-border flex items-center justify-between px-[20px]">
                 <!-- Frame 1171275707 -->
                 <div class="flex flex-row items-center justify-around w-full h-[45px]">
                     <!-- Frame 1171275703 -->
@@ -819,10 +882,118 @@
         </div>
     </div>
 
+    <!-- model -->
+    <!-- Popup HTML code -->
+    <div id="popup" class=" fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+        <!-- Popup Content -->
+        <div class="relative bg-white rounded-lg shadow-lg w-[95%] max-w-[1200px] overflow-y-auto max-h-[95%] p-4">
+            <!-- Close Button -->
+            <button id="closePopup"
+                class="absolute top-1 right-2 flex items-center justify-center bg-black w-[50px] rounded-[50%] text-white h-[50px] text-[50px]">&times;</button>
+
+            <section class="flex overflow-hidden flex-col items-center px-6 py-10 bg-white max-md:px-5 max-md:py-6">
+                <header class="flex flex-col max-w-full text-center w-[550px]">
+                    <h2 class="text-2xl font-semibold leading-none text-black max-md:max-w-full max-sm:leading-10">
+                        আপনার পছন্দের ওয়েবসাইট সিলেক্ট করুন
+                    </h2>
+                    <p class="mt-2 text-sm leading-loose text-gray-800 max-md:max-w-full">
+                        সামর্থ্য এবং সামর্থ্য সহ আপনার স্বপ্নের ওয়েবসাইট চালু করার নিখুঁত পরিকল্পনা পান
+                    </p>
+                </header>
+
+                <nav
+                    class="flex overflow-hidden gap-5 justify-around items-center pt-2.5 pb-6 mx-auto mt-11 max-w-full text-base text-center text-black whitespace-nowrap w-[433px] max-md:pr-5 max-md:mt-10">
+                    <a href="#" class="font-bold">T-shirt</a>
+                    <a href="#" class="font-bold">T-shirt</a>
+                    <a href="#" class="font-bold">T-shirt</a>
+                    <a href="#" class="font-bold">T-shirt</a>
+                    <a href="#" class="font-bold">T-shirt</a>
+                </nav>
+
+                <main
+                    class="flex flex-wrap gap-6 items-center self-stretch mt-11 w-full max-md:mt-10 max-md:max-w-full">
+                    <!-- Article 1 -->
+                    <article
+                        class="flex flex-col grow shrink self-stretch my-auto rounded-none min-w-[240px] w-[276px]">
+                        <div
+                            class="flex flex-col justify-center px-3.5 py-3.5 rounded-2xl bg-slate-100 shadow-[-1px_-1px_0px_rgba(255,255,255,1)]">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/7bbb68067eadfecb56194005f79cd1f7b0af1b4fc4751b18de67c749928815c6?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                                alt="e Commerce website demo 01"
+                                class="object-contain w-full rounded-xl aspect-[1.5] shadow-[-7px_-7px_14px_rgba(255,255,255,1)]" />
+                        </div>
+                        <div class="flex flex-col pr-5 pl-5 mt-5 w-full font-bold">
+                            <h3 class="text-lg leading-none text-black">e Commerce website demo 01</h3>
+                            <a href="#"
+                                class="gap-2 self-stretch py-2.5 pr-9 pl-8 mt-4 max-w-full text-xs bg-white min-h-[38px] rounded-[89px] shadow-[4px_4px_9px_rgba(136,150,163,0.2)] text-neutral-800 w-[126px] max-md:px-5">
+                                View Live
+                            </a>
+                        </div>
+                    </article>
+                    <article
+                        class="flex flex-col grow shrink self-stretch my-auto rounded-none min-w-[240px] w-[276px]">
+                        <div
+                            class="flex flex-col justify-center px-3.5 py-3.5 rounded-2xl bg-slate-100 shadow-[-1px_-1px_0px_rgba(255,255,255,1)]">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/7bbb68067eadfecb56194005f79cd1f7b0af1b4fc4751b18de67c749928815c6?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                                alt="e Commerce website demo 01"
+                                class="object-contain w-full rounded-xl aspect-[1.5] shadow-[-7px_-7px_14px_rgba(255,255,255,1)]" />
+                        </div>
+                        <div class="flex flex-col pr-5 pl-5 mt-5 w-full font-bold">
+                            <h3 class="text-lg leading-none text-black">e Commerce website demo 01</h3>
+                            <a href="#"
+                                class="gap-2 self-stretch py-2.5 pr-9 pl-8 mt-4 max-w-full text-xs bg-white min-h-[38px] rounded-[89px] shadow-[4px_4px_9px_rgba(136,150,163,0.2)] text-neutral-800 w-[126px] max-md:px-5">
+                                View Live
+                            </a>
+                        </div>
+                    </article>
+                    <article
+                        class="flex flex-col grow shrink self-stretch my-auto rounded-none min-w-[240px] w-[276px]">
+                        <div
+                            class="flex flex-col justify-center px-3.5 py-3.5 rounded-2xl bg-slate-100 shadow-[-1px_-1px_0px_rgba(255,255,255,1)]">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/7bbb68067eadfecb56194005f79cd1f7b0af1b4fc4751b18de67c749928815c6?placeholderIfAbsent=true&apiKey=285ec3e998a14c78a1ac78d2a1c3a558"
+                                alt="e Commerce website demo 01"
+                                class="object-contain w-full rounded-xl aspect-[1.5] shadow-[-7px_-7px_14px_rgba(255,255,255,1)]" />
+                        </div>
+                        <div class="flex flex-col pr-5 pl-5 mt-5 w-full font-bold">
+                            <h3 class="text-lg leading-none text-black">e Commerce website demo 01</h3>
+                            <a href="#"
+                                class="gap-2 self-stretch py-2.5 pr-9 pl-8 mt-4 max-w-full text-xs bg-white min-h-[38px] rounded-[89px] shadow-[4px_4px_9px_rgba(136,150,163,0.2)] text-neutral-800 w-[126px] max-md:px-5">
+                                View Live
+                            </a>
+                        </div>
+                    </article>
+                </main>
+            </section>
+        </div>
+    </div>
 
 </body>
+
 <script>
-    AOS.init();
+    $(document).ready(function () {
+        AOS.init();
+
+        // jQuery to show/hide the popup
+        const $popup = $('#popup');
+
+        $('.select-theme').on('click', function () {
+            $popup.removeClass('hidden');
+        });
+
+        $('#closePopup').on('click', function () {
+            $popup.addClass('hidden');
+        });
+
+        // Close popup when clicking outside
+        $popup.on('click', function (event) {
+            if (event.target === $popup[0]) {
+                $popup.addClass('hidden');
+            }
+        });
+    });
+
 </script>
 
 </html>
